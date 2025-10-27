@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "170594379420",
+    "firebase_url": "https://android-e-book-8dee6.firebaseio.com",
+    "project_id": "android-e-book-8dee6",
+    "storage_bucket": "android-e-book-8dee6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170594379420:android:057095f1271c644741af59",
+        "android_client_info": {
+          "package_name": "com.example.androidebookapps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170594379420-5pqj47ru05r4s4tajeik5hq3eckdej1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.androidebookapps",
+            "certificate_hash": "b91a0a0accab38a32e61b10d25bb89206868535b"
+          }
+        },
+        {
+          "client_id": "170594379420-g4rqdkr5sru3kucc6hpkf5sqskh7cocr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBepKHayjUCKGqhlCzghG-LpL7r5FQs_4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170594379420-g4rqdkr5sru3kucc6hpkf5sqskh7cocr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
