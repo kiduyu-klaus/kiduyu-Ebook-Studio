@@ -55,7 +55,7 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
-    namespace 'com.example.ebookstudio'
+    namespace 'com.kiduyu.ebookstudio'
 
 }
 

@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.databinding.ActivityEditProfileBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityEditProfileBinding;
 import com.kiduyu.fragment.ProfileImage;
 import com.kiduyu.response.EditProfileRP;
 import com.kiduyu.rest.ApiClient;

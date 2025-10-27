@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.androidebookapps.databinding.ActivitySearchHomeBookBinding;
+import com.kiduyu.ebookstudio.databinding.ActivitySearchHomeBookBinding;
 import com.kiduyu.fragment.BookGridFragment;
 import com.kiduyu.fragment.BookListFragment;
 import com.kiduyu.util.BannerAds;

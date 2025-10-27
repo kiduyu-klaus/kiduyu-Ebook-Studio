@@ -7,7 +7,7 @@ import android.webkit.JavascriptInterface;
 import android.widget.Toast;
 
 import com.cinetpay.androidsdk.CinetPayWebAppInterface;
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.util.Method;
 
 

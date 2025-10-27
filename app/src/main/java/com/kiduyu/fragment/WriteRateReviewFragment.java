@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.LayoutWriteReviewBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.LayoutWriteReviewBinding;
 import com.kiduyu.response.PostRateRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;

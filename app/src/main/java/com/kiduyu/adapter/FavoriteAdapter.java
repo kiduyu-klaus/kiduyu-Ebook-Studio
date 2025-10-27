@@ -11,8 +11,8 @@ import android.widget.LinearLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowFavoriteBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowFavoriteBinding;
 import com.kiduyu.item.SubCatListBook;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.FavouriteIF;

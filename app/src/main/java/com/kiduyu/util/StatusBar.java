@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 
 
 public class StatusBar {

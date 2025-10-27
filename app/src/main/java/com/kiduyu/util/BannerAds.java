@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import com.applovin.mediation.ads.MaxAdView;
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;

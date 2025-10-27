@@ -21,7 +21,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.util.DatabaseHandler;
 import com.kiduyu.util.Method;
 

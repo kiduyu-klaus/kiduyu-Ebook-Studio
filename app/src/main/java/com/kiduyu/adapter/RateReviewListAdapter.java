@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.kiduyu.ebookstudio.LoginActivity;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowRateReviewBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowRateReviewBinding;
 import com.kiduyu.item.RateReviewList;
 import com.kiduyu.response.PostRateRP;
 import com.kiduyu.rest.ApiClient;

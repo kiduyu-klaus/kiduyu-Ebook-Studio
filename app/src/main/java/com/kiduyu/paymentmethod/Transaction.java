@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.kiduyu.ebookstudio.MainActivity;
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.response.PaymentSuccessRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;

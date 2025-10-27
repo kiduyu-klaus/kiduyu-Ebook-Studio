@@ -11,9 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.ebookstudio.SearchBookActivity;
-import com.example.androidebookapps.databinding.FragmentLatestBinding;
+import com.kiduyu.ebookstudio.databinding.FragmentLatestBinding;
 import com.kiduyu.util.Method;
 
 public class LatestFragment extends Fragment {

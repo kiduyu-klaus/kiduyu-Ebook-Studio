@@ -1,0 +1,291 @@
+<resources>
+    <string name="app_name">استوديو كيدويو للكتب الإلكترونية</string>
+
+    <string name="lbl_ebook_app">استوديو كيدويو للكتب الإلكترونية</string>
+    <string name="lbl_welcome_back">مرحبًا بعودتك!</string>
+    <string name="lbl_let_s_log_in_a">تسجيل الدخول للمتابعة</string>
+    <string name="lbl_email">بريد إلكتروني*</string>
+    <string name="lbl_name">اسم*</string>
+    <string name="lbl_pass">كلمة المرور</string>
+    <string name="lbl_phone">هاتف</string>
+    <string name="lbl_remember_me">تذكرنى</string>
+    <string name="msg_forgot_password">هل نسيت كلمة السر؟</string>
+    <string name="lbl_log_in">تسجيل الدخول</string>
+    <string name="lbl_skip">يتخطى</string>
+    <string name="msg_by_signing_in_y">بتسجيل الدخول فإنك تقبل</string>
+    <string name="msg_by_signing_up_policy">سياسة الخصوصية</string>
+    <string name="msg_or_continue_with">أو الاستمرار مع</string>
+    <string name="lbl_google">تسجيل الدخول مع جوجل</string>
+    <string name="msg_don_t_have_an_a">ليس لديك حساب؟</string>
+    <string name="lbl_sign_up">اشتراك</string>
+    <string name="lbl_let_sing_up">\"دعونا نقوم بالتسجيل.\"</string>
+    <string name="lbl_register">يسجل</string>
+    <string name="msg_by_signing_up_y">بالتسجيل فإنك تقبل</string>
+    <string name="msg_already_have_acc">هل لديك حساب بالفعل؟</string>
+    <string name="reg_log_in">تسجيل الدخول</string>
+    <string name="lbl_send_email">إرسال البريد الإلكتروني</string>
+    <string name="lbl_forgot_password">هل نسيت كلمة السر</string>
+    <string name="msg_enter_your_email">أدخل عنوان بريدك الإلكتروني الصحيح أدناه وسنرسل إليك بريدًا إلكترونيًا يحتوي على تعليمات حول كيفية تغيير كلمة المرور الخاصة بك</string>
+    <string name="please_accept">قبول سياسة الخصوصية</string>
+    <string name="please_enter_email">الرجاء إدخال البريد الإلكتروني</string>
+    <string name="please_enter_password">الرجاء إدخال كلمة المرور</string>
+    <string name="please_enter_name">الرجاء إدخال الاسم</string>
+    <string name="please_enter_phone">الرجاء إدخال رقم الهاتف</string>
+
+    <string name="lbl_next">التالي</string>
+    <string name="intro_title_1">الكتب فقط يمكن أن تساعدك</string>
+    <string name="intro_desc_1">يمكن أن تساعدك الكتب على زيادة معرفتك وتصبح أكثر نجاحًا.</string>
+    <string name="intro_title_2">تعلم وفقًا لجدولك الزمني</string>
+    <string name="intro_desc_2">تعلم الكثير من المهارات الجديدة من خلال دروسنا المثيرة للاهتمام من خلال دوراتنا وحل المهام</string>
+    <string name="intro_title_3">مرحبا بكم في تطبيق الكتاب الاليكتروني</string>
+    <string name="intro_desc_3">لدينا صديق حقيقي في حياتنا والكتب هي ذلك.الكتاب لديه القدرة على تغيير نفسك وجعلك أكثر قيمة.</string>
+    <string name="lbl_get_started">ابدأ</string>
+
+    <string name="no_data_found">لم يتم العثور على بيانات..</string>
+    <string name="lbl_search_here">ابحث عن الكتاب هنا..</string>
+    <string name="lbl_featured">مميز</string>
+    <string name="msg_continue_reading">مواصلة القراءة</string>
+    <string name="lbl_trending">الكتب الرائجة</string>
+    <string name="lbl_premium">غالي</string>
+    <string name="ok">نعم</string>
+    <string name="failed_try_again">فشلت المحاولة مرة أخرى</string>
+    <string name="internet_connection">لا يوجد اتصال بالإنترنت</string>
+    <string name="wrong">هل هناك خطب ما..</string>
+    <string name="license_msg">أنت تستخدم ترخيصًا غير صالح أو اسم الحزمة قيد الاستخدام بالفعل، لمزيد من المعلومات اتصل بنا: info@viaviweb.com أو viaviwebtech@gmail.com</string>
+    <string name="share_msg">قم بتنزيل هذا التطبيق من هذا الرابط</string>
+    <string name="lbl_explore">اكتشف الآن</string>
+
+    <string name="by_author">بواسطة%s</string>
+    <string name="currency_code">%s%s</string>
+
+    <string name="cat_title">فئات</string>
+    <string name="author_title">مؤلف</string>
+    <string name="latest_title">أحدث</string>
+    <string name="lbl_show_in">عرض في</string>
+    <string name="book_detail_title">صفحة التفاصيل</string>
+    <string name="lbl_favourite">مفضل</string>
+    <string name="lbl_download">تحميل</string>
+    <string name="lbl_read_book">يقرأ</string>
+    <string name="lbl_report_book">تقرير</string>
+    <string name="lbl_about_this_book">حول هذا الكتاب</string>
+    <string name="lbl_ratings_review">التقييمات والمراجعات</string>
+    <string name="lbl_rate_this_book">قيم هذا الكتاب</string>
+    <string name="lbl_write_a_review">اكتب مراجعة</string>
+    <string name="lbl_related_books">كتب ذات صلة</string>
+    <string name="lbl_author_books">كتب المؤلف</string>
+    <string name="lbl_author_info">معلومات المؤلف</string>
+    <string name="msg_no_author_book">لم يتم العثور على كتاب المؤلف..</string>
+    <string name="lbl_review_detail">(%sالتعليقات)</string>
+
+    <string name="lbl_buy_book">شراء كتاب</string>
+    <string name="lbl_buy_plan">شراء الاشتراك</string>
+    <string name="lbl_buy_plan_title">شراء الاشتراك أو الإيجار لهذا الكتاب</string>
+    <string name="rent_days">%sيوم (أيام)</string>
+    <string name="no_rent">لا يوجد كتاب للإيجار..</string>
+
+    <string name="star_all">الجميع</string>
+    <string name="star_1">1</string>
+    <string name="star_2">2</string>
+    <string name="star_3">3</string>
+    <string name="star_4">4</string>
+    <string name="star_5">5</string>
+
+    <string name="lbl_book_review">مراجعة الكتاب</string>
+    <string name="msg_how_likely_are">ما مدى احتمال أن توصي بنقله إلى صديق؟ (1-منخفض، 5-مرتفع)</string>
+    <string name="lbl_write_your_review">اكتب رأيك</string>
+    <string name="lbl_your_review_here">تعليقك هنا ..</string>
+    <string name="lbl_submit">يُقدِّم</string>
+    <string name="loading">تحميل..</string>
+    <string name="enter_review">يرجى كتابة رأيك</string>
+
+    <string name="lbl_detail_report_book">كتاب التقرير</string>
+    <string name="lbl_detail_report_hint">أكتب السبب هنا..</string>
+    <string name="lbl_detail_report_msg">أكتب السبب هنا..</string>
+
+    <string name="lbl_report_comment">الإبلاغ عن التعليق</string>
+    <string name="report_delete">يمسح</string>
+    <string name="report_report">تقرير</string>
+    <string name="lbl_delete_comment">حذف التعليق</string>
+    <string name="delete_comment_msg">هل أنت متأكد أنك تريد الحذف؟</string>
+
+    <string name="lbl_setting">إعدادات</string>
+    <string name="setting_noti">تمكين دفع الإخطار</string>
+    <string name="setting_dark">وضع الموضوع</string>
+    <string name="setting_clear">مسح ذاكرة التخزين المؤقت</string>
+    <string name="setting_more">المزيد من التطبيقات</string>
+    <string name="setting_share">مشاركة التطبيق</string>
+    <string name="setting_rate">معدل التطبيق</string>
+
+    <string name="lbl_app_version">إصدار التطبيق</string>
+    <string name="lbl_company">شركة</string>
+    <string name="lbl_email_address">بريد إلكتروني</string>
+    <string name="lbl_website">موقع إلكتروني</string>
+    <string name="lbl_contact">اتصال</string>
+    <string name="lbl_about_us">معلومات عنا</string>
+    <string name="lbl_about_us_title">معلومات عنا</string>
+    <string name="no_link_found">لم يتم العثور على رابط</string>
+
+    <string name="logout_message">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="cancel">يلغي</string>
+    <string name="logout_yes">نعم، تسجيل الخروج</string>
+    <string name="logout_disable">قام المشرف بتعطيل حسابك أو حذفه</string>
+
+    <string name="you_have_allReady_download_book">لقد قمت بالفعل بتنزيل هذا الكتاب</string>
+    <string name="downloading">جارٍ التنزيل</string>
+
+    <string name="profile_title">حساب تعريفي</string>
+    <string name="profile_edt">يحرر</string>
+
+    <string name="tab_favorite">المفضل لدي</string>
+    <string name="tab_download">التحميل الخاص بي</string>
+    <string name="tab_continue">متابعة الكتاب</string>
+    <string name="tab_subs">الاشتراك</string>
+    <string name="tab_rent">إيجار</string>
+    <string name="login_require">مطلوب تسجيل الدخول ..</string>
+    <string name="lbl_delete">يمسح</string>
+    <string name="delete_msg">هل أنت متأكد أنك تريد الحذف؟</string>
+    <string name="no_download">لم يتم العثور على بيانات التحميل..</string>
+    <string name="no_favorite">لم يتم العثور على البيانات المفضلة..</string>
+    <string name="no_continue">لم يتم العثور على بيانات المتابعة..</string>
+
+    <string name="profile_edt_title">تحرير الملف الشخصي</string>
+    <string name="profile_edt_save">حفظ التغييرات</string>
+    <string name="storage_permission">يرجى السماح إذن التخزين</string>
+    <string name="edit_gallery">حدد المعرض</string>
+    <string name="edit_sel_gallery">معرض</string>
+
+    <string name="lbl_free">حر</string>
+    <string name="lbl_paid">مدفوع</string>
+
+    
+    <string name="isRTL">خطأ شنيع</string>
+
+    <string name="search_title">نتائج البحث</string>
+    <string name="search_msg">الرجاء إدخال البيانات</string>
+    <string name="subscription_plan">خطة الاشتراك</string>
+    <string name="subscription_msg">الوصول الكامل إلى جميع المحتويات المجانية والمتميزة مع التنزيل أيضًا.اختر الخطة بناءً على استخدامك.يوجد أدناه اسم الخطة والسعر وأيام الصلاحية.</string>
+    <string name="select_plan">اختر الخطة</string>
+    <string name="no_plan">لم يتم العثور على خطة..</string>
+    <string name="no_payment">لم يتم العثور على طريقة الدفع..</string>
+    <string name="plan_line">/</string>
+    <string name="payment_method">طريقة الدفع</string>
+    <string name="payment_proceed">المضي قدما في الدفع</string>
+    <string name="payment_select">اختر طريقة الدفع</string>
+    <string name="payment_success">نجاح الدفع</string>
+    <string name="back_to_home">العودة إلى المنزل</string>
+    <string name="pay">يدفع</string>
+
+    <string name="my_subs">اشتراكي</string>
+    <string name="current_plan">الخطة الحالية :</string>
+    <string name="expired_on">انتهت صلاحيته في :</string>
+    <string name="NA">لا يوجد</string>
+
+    <string name="payment_stripe">شريط</string>
+    <string name="payment_paypal">باي بال</string>
+    <string name="payment_razor">رازورباي</string>
+    <string name="payment_paystack">الراتب</string>
+    <string name="payment_payumoney">PayUMoney</string>
+    <string name="payment_flutterwave">موجة الرفرفة</string>
+    <string name="payment_need_phone">الدفع يحتاج هاتف</string>
+    <string name="payment_cinetpay">com.CinetPay</string>
+    <string name="payment_manual">تحويل بنكي يدوي</string>
+    <string name="payment_sslcommerz">SSLCommerz</string>
+
+    <string name="paypal_payment_error_1">حدث فشل غير محتمل للغاية</string>
+    <string name="paypal_payment_error_2">ألغى المستخدم.</string>
+    <string name="paypal_payment_error_3">تم إرسال دفعة غير صالحة</string>
+    <string name="paypal_payment_error_4">فشل باي بال</string>
+    <string name="stripe_payment_error_1">فشل الشريط</string>
+    <string name="stripe_token_error">حدث بعض الخطأ عند إنشاء رمز الشريط</string>
+    <string name="proceed_with_payment">الآن تابع الدفع</string>
+    <string name="razor_payment_error_1">فشل Razorpay</string>
+    <string name="razor_desc">كتاب الدفع التطبيق</string>
+    <string name="pay_stack_error_1">حدث بعض الخطأ</string>
+    <string name="flutterwave_payment_error">فشل الدفع Flutterwave</string>
+    <string name="flutterwave_payment_failed">فشل الدفع Flutterwave</string>
+    <string name="flutterwave_payment_cancel">إلغاء الدفع Flutterwave</string>
+
+    <string name="filter_title">فلتر</string>
+    <string name="filter_sort">فرز حسب</string>
+    <string name="filter_author">مؤلف</string>
+    <string name="filter_cat">فئة</string>
+    <string name="filter_reset">إعادة ضبط</string>
+    <string name="filter_apply">يتقدم</string>
+
+    <string name="filter_sort_new">وصول جديد</string>
+    <string name="filter_sort_pop">شعبية</string>
+    <string name="filter_sort_rating">التقييمات</string>
+
+    <string name="select_sort">الرجاء اختيار أي واحد</string>
+
+    <string name="change_them">تغيير الموضوع</string>
+    <string name="system_default">الافتراضي للنظام</string>
+    <string name="system_light">وضع الضوء</string>
+    <string name="system_dark">الوضع المظلم</string>
+
+    <string name="app_update_title">تحديث التطبيق</string>
+    <string name="app_update_btn">تحديث</string>
+    <string name="app_cancel_btn">يلغي</string>
+
+    <string name="scheme">https</string>
+    <string name="host">envato.viaviweb.in</string>
+    <string name="pathPrefix">/ebook_app/</string>
+
+    <string name="get_scheme">كتاب</string>
+    <string name="get_host">ebook_app</string>
+    <string name="get_pathPrefix">/</string>
+
+    <string name="admob_id">كاليفورنيا-التطبيق-حانة-3803477439180910~9075957477</string>
+    <string name="applovin_sdk_key">xxxxxx</string>
+
+    <string name="back_key">الرجاء النقر فوق \"السابق\" مرة أخرى للخروج</string>
+    <string name="download_permission">يتطلب الإذن تنزيل الكتاب، انتقل إلى صفحة الإعداد وعلى إشعار الدفع</string>
+
+    <string name="delete_acc">حذف حسابي</string>
+    <string name="delete_acc_info">هل أنت متأكد أنك تريد الحذف؟</string>
+    <string name="delete_acc_btn">نعم، احذف</string>
+
+    <string name="bottom_home">بيت</string>
+    <string name="bottom_latest">أحدث</string>
+    <string name="bottom_cat">فئة</string>
+    <string name="bottom_author">مؤلف</string>
+    <string name="bottom_profile">حساب تعريفي</string>
+
+    <string name="empty_my_subs">لم يتم شراء أي اشتراك</string>
+    <string name="empty_subs_desc">انقر على الزر أدناه لشراء خطة الاشتراك</string>
+    <string name="empty_subs_start_btn">اشترك الآن</string>
+
+    <string name="cache_size">مقاس</string>
+    <string name="cache_mb">ميغابايت</string>
+    <string name="cache_clear_msg">البيانات المخزنة مؤقتا واضحة</string>
+    <string name="download_disable_msg">تم تعطيل تنزيل الكتاب من قبل المشرف</string>
+
+    <string name="search_author">ابحث عن المؤلف هنا..</string>
+    <string name="search_cat">فئة البحث هنا..</string>
+
+    <string name="empty_rent_title">لم يتم شراء أي كتب</string>
+    <string name="empty_rent_desc">انقر على الزر أدناه لاستئجار كتاب</string>
+    <string name="empty_rent_start_btn">تصفح الآن</string>
+
+    <string name="empty_continue_title">لا يوجد أي كتب تستمر</string>
+    <string name="empty_continue_desc">انقر على الزر أدناه لتصفح كتاب</string>
+
+    <string name="empty_fav_title">لا يوجد أي كتب مفضلة</string>
+    <string name="empty_fav_desc">انقر على الزر أدناه لتصفح كتاب</string>
+
+    <string name="empty_down_title">لم يتم تنزيل أي كتب</string>
+    <string name="empty_down_desc">انقر على الزر أدناه لتصفح الكتاب وتحميله</string>
+
+    <string name="rent_book_msg">إذا قرأت هذا الكتاب يمكنك استئجاره، انقر فوق الزر أدناه واشتريه الآن</string>
+    <string name="subs_book_msg">إذا قرأت هذا الكتاب، يمكنك شراء الاشتراك، انقر فوق الزر أدناه وشراء الاشتراك</string>
+
+    <string name="rent_download_book_msg">إذا كنت ترغب في تحميل هذا الكتاب يمكنك استئجاره، انقر فوق الزر أدناه وشراء الآن</string>
+    <string name="subs_download_book_msg">إذا كنت ترغب في تنزيل هذا الكتاب، يمكنك شراء الاشتراك، انقر فوق الزر أدناه وشراء الاشتراك</string>
+
+    <string name="cinetpay_success">لقد تم إتمام عملية الدفع الخاصة بك بنجاح</string>
+    <string name="cinetpay_failed">فشل الدفع الخاص بك</string>
+
+
+
+</resources>

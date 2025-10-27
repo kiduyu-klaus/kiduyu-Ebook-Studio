@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.kiduyu.ebookstudio.PlanListActivity;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.FragmentDashboardBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.FragmentDashboardBinding;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;
 import com.kiduyu.util.API;

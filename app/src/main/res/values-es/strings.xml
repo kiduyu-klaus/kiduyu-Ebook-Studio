@@ -1,0 +1,291 @@
+<resources>
+    <string name="app_name">estudio de libros electrónicos kiduyu</string>
+
+    <string name="lbl_ebook_app">estudio de libros electrónicos kiduyu</string>
+    <string name="lbl_welcome_back">¡Bienvenido de nuevo!</string>
+    <string name="lbl_let_s_log_in_a">Inicia sesión para continuar</string>
+    <string name="lbl_email">Correo electrónico*</string>
+    <string name="lbl_name">Nombre*</string>
+    <string name="lbl_pass">Contraseña</string>
+    <string name="lbl_phone">Teléfono</string>
+    <string name="lbl_remember_me">Acuérdate de mí</string>
+    <string name="msg_forgot_password">¿Has olvidado tu contraseña?</string>
+    <string name="lbl_log_in">ACCESO</string>
+    <string name="lbl_skip">Saltar</string>
+    <string name="msg_by_signing_in_y">Al iniciar sesión aceptas</string>
+    <string name="msg_by_signing_up_policy">política de privacidad</string>
+    <string name="msg_or_continue_with">O continuar con</string>
+    <string name="lbl_google">Iniciar sesión con Google</string>
+    <string name="msg_don_t_have_an_a">¿No tienes una cuenta?</string>
+    <string name="lbl_sign_up">Inscribirse</string>
+    <string name="lbl_let_sing_up">\"Regístrese\".</string>
+    <string name="lbl_register">REGISTRO</string>
+    <string name="msg_by_signing_up_y">Al registrarte aceptas</string>
+    <string name="msg_already_have_acc">¿Ya tienes una cuenta?</string>
+    <string name="reg_log_in">Acceso</string>
+    <string name="lbl_send_email">ENVIAR CORREO ELECTRÓNICO</string>
+    <string name="lbl_forgot_password">Has olvidado tu contraseña</string>
+    <string name="msg_enter_your_email">Ingrese su dirección de correo electrónico válida a continuación y le enviaremos un correo electrónico con instrucciones sobre cómo cambiar su contraseña.</string>
+    <string name="please_accept">Aceptar política de privacidad</string>
+    <string name="please_enter_email">Por favor ingrese el correo electrónico</string>
+    <string name="please_enter_password">Por favor ingrese la contraseña</string>
+    <string name="please_enter_name">por favor ingrese el nombre</string>
+    <string name="please_enter_phone">Por favor ingrese el número de teléfono</string>
+
+    <string name="lbl_next">Next</string>
+    <string name="intro_title_1">Sólo los libros pueden ayudarte</string>
+    <string name="intro_desc_1">Los libros pueden ayudarle a aumentar sus conocimientos y tener más éxito.</string>
+    <string name="intro_title_2">Aprenda según su horario</string>
+    <string name="intro_desc_2">Aprenda muchas habilidades nuevas con nuestras interesantes lecciones de nuestros cursos y resuelva tareas.</string>
+    <string name="intro_title_3">Bienvenido a la aplicación de libros electrónicos</string>
+    <string name="intro_desc_3">Tenemos verdaderos amigos en nuestra vida y los libros son eso.El libro tiene el poder de cambiarte a ti mismo y hacerte más valioso.</string>
+    <string name="lbl_get_started">Empezar</string>
+
+    <string name="no_data_found">No se encontraron datos..</string>
+    <string name="lbl_search_here">Busca libro aquí..</string>
+    <string name="lbl_featured">Featured </string>
+    <string name="msg_continue_reading">Continuar leyendo</string>
+    <string name="lbl_trending">Libros de tendencia</string>
+    <string name="lbl_premium">De primera calidad</string>
+    <string name="ok">DE ACUERDO</string>
+    <string name="failed_try_again">Error al intentarlo de nuevo</string>
+    <string name="internet_connection">Sin conexión a internet</string>
+    <string name="wrong">Ocurre algo..</string>
+    <string name="license_msg">Está utilizando una licencia no válida o el nombre del paquete ya está en uso. Para obtener más información, contáctenos: info@viaviweb.com o viaviwebtech@gmail.com</string>
+    <string name="share_msg">Descarga esta aplicación desde este enlace</string>
+    <string name="lbl_explore">Explora ahora</string>
+
+    <string name="by_author">por%s</string>
+    <string name="currency_code">%s%s</string>
+
+    <string name="cat_title">Categorías</string>
+    <string name="author_title">Author</string>
+    <string name="latest_title">El último</string>
+    <string name="lbl_show_in">Entrar</string>
+    <string name="book_detail_title">Página de detalles</string>
+    <string name="lbl_favourite">Favourite</string>
+    <string name="lbl_download">Descargar</string>
+    <string name="lbl_read_book">Leer</string>
+    <string name="lbl_report_book">Informe</string>
+    <string name="lbl_about_this_book">Acerca de este libro</string>
+    <string name="lbl_ratings_review">Calificaciones y reseñas</string>
+    <string name="lbl_rate_this_book">Califica este libro</string>
+    <string name="lbl_write_a_review">Escribe una reseña</string>
+    <string name="lbl_related_books">Libros relacionados</string>
+    <string name="lbl_author_books">Libros de autor</string>
+    <string name="lbl_author_info">Información del autor</string>
+    <string name="msg_no_author_book">No se encontró ningún libro de autor..</string>
+    <string name="lbl_review_detail">(%sReseñas)</string>
+
+    <string name="lbl_buy_book">Comprar Libro</string>
+    <string name="lbl_buy_plan">Comprar suscripción</string>
+    <string name="lbl_buy_plan_title">Comprar suscripción o alquilar este libro.</string>
+    <string name="rent_days">%sDía(s)</string>
+    <string name="no_rent">Sin libro de alquiler..</string>
+
+    <string name="star_all">All</string>
+    <string name="star_1">1</string>
+    <string name="star_2">2</string>
+    <string name="star_3">3</string>
+    <string name="star_4">4</string>
+    <string name="star_5">5</string>
+
+    <string name="lbl_book_review">Reseña del libro</string>
+    <string name="msg_how_likely_are">¿Qué probabilidades hay de que recomiendes transferirlo a un amigo? (1-bajo, 5-alto)</string>
+    <string name="lbl_write_your_review">Escribe tu reseña</string>
+    <string name="lbl_your_review_here">Tu reseña aquí..</string>
+    <string name="lbl_submit">Entregar</string>
+    <string name="loading">Cargando..</string>
+    <string name="enter_review">Por favor escribe tu reseña</string>
+
+    <string name="lbl_detail_report_book">Libro de informes</string>
+    <string name="lbl_detail_report_hint">Escribe aquí el motivo..</string>
+    <string name="lbl_detail_report_msg">Escribe aquí el motivo..</string>
+
+    <string name="lbl_report_comment">Informar comentario</string>
+    <string name="report_delete">Borrar</string>
+    <string name="report_report">Informe</string>
+    <string name="lbl_delete_comment">Delete Comment</string>
+    <string name="delete_comment_msg">Are you sure you want delete ?</string>
+
+    <string name="lbl_setting">Ajustes</string>
+    <string name="setting_noti">Habilitar notificación push</string>
+    <string name="setting_dark">Modo temático</string>
+    <string name="setting_clear">Borrar caché</string>
+    <string name="setting_more">Más aplicaciones</string>
+    <string name="setting_share">Compartir aplicación</string>
+    <string name="setting_rate">Calificar aplicación</string>
+
+    <string name="lbl_app_version">Versión de la aplicación</string>
+    <string name="lbl_company">Compañía</string>
+    <string name="lbl_email_address">Correo electrónico</string>
+    <string name="lbl_website">Sitio web</string>
+    <string name="lbl_contact">Contacto</string>
+    <string name="lbl_about_us">About Us</string>
+    <string name="lbl_about_us_title">About Us</string>
+    <string name="no_link_found">No se encontró ningún enlace</string>
+
+    <string name="logout_message">Are you sure you want to logout ?</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="cancel">CANCELAR</string>
+    <string name="logout_yes">SÍ, CERRAR SESIÓN</string>
+    <string name="logout_disable">El administrador deshabilita o elimina su cuenta</string>
+
+    <string name="you_have_allReady_download_book">Ya has descargado este libro.</string>
+    <string name="downloading">Descargando</string>
+
+    <string name="profile_title">Perfil</string>
+    <string name="profile_edt">Editar</string>
+
+    <string name="tab_favorite">My Favourite</string>
+    <string name="tab_download">Mi descarga</string>
+    <string name="tab_continue">Continuar Reservar</string>
+    <string name="tab_subs">Suscripción</string>
+    <string name="tab_rent">Alquilar</string>
+    <string name="login_require">Es necesario iniciar sesión..</string>
+    <string name="lbl_delete">Borrar</string>
+    <string name="delete_msg">Are you sure you want delete ?</string>
+    <string name="no_download">No se encontraron datos de descarga.</string>
+    <string name="no_favorite">No se encontraron datos favoritos.</string>
+    <string name="no_continue">No se encontraron datos para continuar..</string>
+
+    <string name="profile_edt_title">Editar perfil</string>
+    <string name="profile_edt_save">GUARDAR CAMBIOS</string>
+    <string name="storage_permission">Por favor permita el permiso de almacenamiento</string>
+    <string name="edit_gallery">Seleccionar galería</string>
+    <string name="edit_sel_gallery">Galería</string>
+
+    <string name="lbl_free">Gratis</string>
+    <string name="lbl_paid">Paid</string>
+
+    
+    <string name="isRTL">false</string>
+
+    <string name="search_title">Resultados de la búsqueda</string>
+    <string name="search_msg">Por favor introduce datos</string>
+    <string name="subscription_plan">Plan de suscripción</string>
+    <string name="subscription_msg">Acceso completo a todo el contenido gratuito y premium con descarga también.elija el plan según su uso.A continuación se muestran el nombre del plan, el precio y los días de validez.</string>
+    <string name="select_plan">SELECCIONAR PLAN</string>
+    <string name="no_plan">No se encontró ningún plano...</string>
+    <string name="no_payment">No se encontró ningún método de pago.</string>
+    <string name="plan_line">/</string>
+    <string name="payment_method">Método de pago</string>
+    <string name="payment_proceed">PROCEDER A PAGAR</string>
+    <string name="payment_select">Selecciona el método de pago</string>
+    <string name="payment_success">Pago exitoso</string>
+    <string name="back_to_home">VOLVER A CASA</string>
+    <string name="pay">PAGAR</string>
+
+    <string name="my_subs">Mi suscripción</string>
+    <string name="current_plan">Plan actual:</string>
+    <string name="expired_on">Expired On : </string>
+    <string name="NA">N / A</string>
+
+    <string name="payment_stripe">Raya</string>
+    <string name="payment_paypal">PayPal</string>
+    <string name="payment_razor">pago de afeitar</string>
+    <string name="payment_paystack">pila de pago</string>
+    <string name="payment_payumoney">PayUMoney</string>
+    <string name="payment_flutterwave">Onda de aleteo</string>
+    <string name="payment_need_phone">Teléfono de necesidad de pago</string>
+    <string name="payment_cinetpay">CinetPay</string>
+    <string name="payment_manual">Transferencia bancaria manual</string>
+    <string name="payment_sslcommerz">SslCommerz</string>
+
+    <string name="paypal_payment_error_1">ocurrió una falla extremadamente improbable</string>
+    <string name="paypal_payment_error_2">The user canceled.</string>
+    <string name="paypal_payment_error_3">Se envió un pago no válido</string>
+    <string name="paypal_payment_error_4">fallo de paypal</string>
+    <string name="stripe_payment_error_1">Fallo de la raya</string>
+    <string name="stripe_token_error">Se produjo algún error al generar el token de banda.</string>
+    <string name="proceed_with_payment">Ahora proceda con el pago</string>
+    <string name="razor_payment_error_1">Fallo de Razorpay</string>
+    <string name="razor_desc">Reservar pago de la aplicación</string>
+    <string name="pay_stack_error_1">Se produjo algún error</string>
+    <string name="flutterwave_payment_error">Fallo en el pago de Flutterwave</string>
+    <string name="flutterwave_payment_failed">Error en el pago de Flutterwave</string>
+    <string name="flutterwave_payment_cancel">Cancelación de pago de Flutterwave</string>
+
+    <string name="filter_title">Filtrar</string>
+    <string name="filter_sort">Ordenar por</string>
+    <string name="filter_author">Author</string>
+    <string name="filter_cat">Categoría</string>
+    <string name="filter_reset">REINICIAR</string>
+    <string name="filter_apply">APLICAR</string>
+
+    <string name="filter_sort_new">Recién llegado</string>
+    <string name="filter_sort_pop">Popularidad</string>
+    <string name="filter_sort_rating">Calificaciones</string>
+
+    <string name="select_sort">Por favor seleccione cualquiera</string>
+
+    <string name="change_them">Cambiar tema</string>
+    <string name="system_default">Valor predeterminado del sistema</string>
+    <string name="system_light">Modo de luz</string>
+    <string name="system_dark">Modo oscuro</string>
+
+    <string name="app_update_title">Actualización de la aplicación</string>
+    <string name="app_update_btn">Actualizar</string>
+    <string name="app_cancel_btn">Cancelar</string>
+
+    <string name="scheme">https</string>
+    <string name="host">envato.viaviweb.in</string>
+    <string name="pathPrefix">/ebook_app/</string>
+
+    <string name="get_scheme">libro</string>
+    <string name="get_host">aplicación_ebook</string>
+    <string name="get_pathPrefix">/</string>
+
+    <string name="admob_id">ca-app-pub-3803477439180910~9075957477</string>
+    <string name="applovin_sdk_key">xxxx</string>
+
+    <string name="back_key">Por favor haga clic en ATRÁS nuevamente para salir</string>
+    <string name="download_permission">Se requiere permiso para descargar el libro, vaya a la página de configuración y en la notificación push</string>
+
+    <string name="delete_acc">Eliminar mi cuenta</string>
+    <string name="delete_acc_info">Are you sure you want delete ?</string>
+    <string name="delete_acc_btn">SÍ, BORRAR</string>
+
+    <string name="bottom_home">Hogar</string>
+    <string name="bottom_latest">El último</string>
+    <string name="bottom_cat">Categoría</string>
+    <string name="bottom_author">Author</string>
+    <string name="bottom_profile">Perfil</string>
+
+    <string name="empty_my_subs">Ninguna suscripción comprada</string>
+    <string name="empty_subs_desc">Haga clic en el botón a continuación para comprar el plan de suscripción</string>
+    <string name="empty_subs_start_btn">Suscríbete ahora</string>
+
+    <string name="cache_size">Tamaño</string>
+    <string name="cache_mb">MEGABYTE</string>
+    <string name="cache_clear_msg">Borrar datos en caché</string>
+    <string name="download_disable_msg">Descarga de libros desactivada por el administrador</string>
+
+    <string name="search_author">Search author here..</string>
+    <string name="search_cat">Busque categoría aquí..</string>
+
+    <string name="empty_rent_title">No se han comprado libros</string>
+    <string name="empty_rent_desc">Haga clic en el botón de abajo para alquilar un libro.</string>
+    <string name="empty_rent_start_btn">Navegar ahora</string>
+
+    <string name="empty_continue_title">No hay libros Continuar</string>
+    <string name="empty_continue_desc">Haga clic en el botón de abajo para buscar un libro.</string>
+
+    <string name="empty_fav_title">No hay libros favoritos</string>
+    <string name="empty_fav_desc">Haga clic en el botón de abajo para buscar un libro.</string>
+
+    <string name="empty_down_title">No se han descargado ningún libro</string>
+    <string name="empty_down_desc">Haga clic en el botón a continuación para buscar un libro y descargarlo.</string>
+
+    <string name="rent_book_msg">Si lees este libro, puedes alquilarlo, haz clic en el botón de abajo y cómpralo ahora.</string>
+    <string name="subs_book_msg">Si lees este libro, puedes comprar una suscripción, haz clic en el botón de abajo y compra una suscripción.</string>
+
+    <string name="rent_download_book_msg">Si desea descargar este libro, puede alquilarlo, haga clic en el botón de abajo y cómprelo ahora.</string>
+    <string name="subs_download_book_msg">Si desea descargar este libro, puede comprar una suscripción, haga clic en el botón a continuación y compre una suscripción.</string>
+
+    <string name="cinetpay_success">Su pago se ha completado con éxito</string>
+    <string name="cinetpay_failed">Su pago falló</string>
+
+
+
+</resources>

@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.databinding.ActivityBookListBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityBookListBinding;
 import com.kiduyu.fragment.BookGridFragment;
 import com.kiduyu.fragment.BookListFragment;
 import com.kiduyu.fragment.FilterBookFragment;

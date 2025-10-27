@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.HomeContentSingleAdapter;
-import com.example.androidebookapps.databinding.ActivityBookListSubCatBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityBookListSubCatBinding;
 import com.kiduyu.item.HomeContent;
 import com.kiduyu.item.HomeSection;
 import com.kiduyu.response.HomeRP;

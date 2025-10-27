@@ -13,7 +13,7 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.RateReviewListAdapter;
-import com.example.androidebookapps.databinding.ActivityRateReviewListBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityRateReviewListBinding;
 import com.kiduyu.item.RateReviewList;
 import com.kiduyu.response.RateReviewRP;
 import com.kiduyu.rest.ApiClient;

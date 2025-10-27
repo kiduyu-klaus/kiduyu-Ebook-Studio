@@ -25,7 +25,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.util.Events;
 import com.kiduyu.util.GlobalBus;
 import com.kiduyu.util.Method;

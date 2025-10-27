@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.ebookstudio.R;
-import com.example.ebookstudio.databinding.ActivityAboutUsBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.ActivityAboutUsBinding;
 import com.kiduyu.util.Constant;
 import com.kiduyu.util.Method;
 import com.kiduyu.util.StatusBar;

@@ -14,7 +14,7 @@ import com.kiduyu.ebookstudio.BookDetailsActivity;
 import com.kiduyu.ebookstudio.BookListBySubCatActivity;
 import com.kiduyu.ebookstudio.HomeSectionListActivity;
 import com.kiduyu.ebookstudio.SubCategoryActivity;
-import com.example.androidebookapps.databinding.RowHomeSectionBinding;
+import com.kiduyu.ebookstudio.databinding.RowHomeSectionBinding;
 import com.kiduyu.item.HomeSection;
 import com.kiduyu.util.OnClick;
 

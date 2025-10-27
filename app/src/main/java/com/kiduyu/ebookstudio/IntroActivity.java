@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-import com.example.androidebookapps.databinding.ActivityIntroBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityIntroBinding;
 import com.kiduyu.fragment.IntroFragment;
 import com.kiduyu.util.Method;
 import com.kiduyu.util.StatusBar;

@@ -7,8 +7,8 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import com.example.ebookstudio.R;
-import com.example.ebookstudio.databinding.ActivityDownloadBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.ActivityDownloadBinding;
 import com.kiduyu.fragment.DownloadFragment;
 import com.kiduyu.fragment.FavoriteFragment;
 import com.kiduyu.util.BannerAds;
@@ -35,7 +35,7 @@ public class DownloadActivity extends AppCompatActivity {
         isDown = intent.getStringExtra("isDown");
         switch (isDown) {
             case "isDown":
-                viewDownloadBinding.toolbarMain.tvToolbarTitle.setText(getString(com.example.ebookstudio.R.string.tab_download));
+                viewDownloadBinding.toolbarMain.tvToolbarTitle.setText(getString(com.kiduyu.ebookstudio.R.string.tab_download));
                 viewDownloadBinding.toolbarMain.imageArrowBack.setVisibility(View.VISIBLE);
                 break;
             case "isOff":

@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.ActivityPayStackBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.ActivityPayStackBinding;
 import com.kiduyu.util.Method;
 import com.kiduyu.util.StatusBar;
 import com.tenbis.library.consts.CardType;

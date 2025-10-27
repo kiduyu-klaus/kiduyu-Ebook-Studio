@@ -10,10 +10,10 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowAuthorHomeBinding;
-import com.example.androidebookapps.databinding.RowCatHomeBinding;
-import com.example.androidebookapps.databinding.RowTrendHomeBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowAuthorHomeBinding;
+import com.kiduyu.ebookstudio.databinding.RowCatHomeBinding;
+import com.kiduyu.ebookstudio.databinding.RowTrendHomeBinding;
 import com.kiduyu.item.HomeContent;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.Constant;
@@ -65,6 +65,7 @@ public class HomeContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             if (!homeContents.get(position).getPostImage().equals("")) {
                 Glide.with(activity.getApplicationContext()).load(homeContents.get(position).getPostImage())
                         .placeholder(R.drawable.placeholder_landscape)
+                        .centerCrop()
                         .into(categoryHolder.rowCatHomeBinding.ivHomeCat);
             }
             categoryHolder.rowCatHomeBinding.flHomeCat.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +80,7 @@ public class HomeContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             if (!homeContents.get(position).getPostImage().equals("")) {
                 Glide.with(activity.getApplicationContext()).load(homeContents.get(position).getPostImage())
                         .placeholder(R.drawable.placeholder_landscape)
+                        .centerCrop()
                         .into(subCategoryHolder.rowSubCatHomeBinding.ivHomeCat);
             }
 
@@ -96,6 +98,7 @@ public class HomeContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             if (!homeContentPos.getPostImage().equals("")) {
                 Glide.with(activity.getApplicationContext()).load(homeContentPos.getPostImage())
                         .placeholder(R.drawable.placeholder_portable)
+                        .centerCrop()
                         .into(bookHolder.rowTrendHomeBinding.ivHomePopular);
             }
             if (homeContentPos.getBook_on_rent().equals("1")) {

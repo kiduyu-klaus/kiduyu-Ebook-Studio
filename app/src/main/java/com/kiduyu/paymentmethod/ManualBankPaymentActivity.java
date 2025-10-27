@@ -8,7 +8,7 @@ import android.webkit.WebSettings;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.databinding.ActivityManualPaymentBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityManualPaymentBinding;
 import com.kiduyu.util.BannerAds;
 import com.kiduyu.util.Method;
 import com.kiduyu.util.StatusBar;

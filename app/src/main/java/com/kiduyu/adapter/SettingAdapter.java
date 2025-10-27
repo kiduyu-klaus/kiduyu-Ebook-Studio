@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowSettingBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowSettingBinding;
 import com.kiduyu.item.PageList;
 import com.kiduyu.util.OnClick;
 

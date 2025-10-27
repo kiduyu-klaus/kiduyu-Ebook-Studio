@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.item.DownloadList;
 import com.kiduyu.response.FavoriteRP;
 import com.kiduyu.rest.ApiClient;

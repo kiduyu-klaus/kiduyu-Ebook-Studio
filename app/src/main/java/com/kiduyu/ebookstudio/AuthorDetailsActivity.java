@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.bumptech.glide.Glide;
-import com.example.ebookstudio.R;
-import
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.ActivityAuthorDetailBinding;
 import com.kiduyu.adapter.BookGridAdapter;
 import com.kiduyu.item.AuthorDetailList;
 import com.kiduyu.item.BookRelatedList;

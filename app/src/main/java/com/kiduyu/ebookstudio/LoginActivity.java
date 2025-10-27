@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.example.androidebookapps.databinding.ActivityLoginBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityLoginBinding;
 import com.kiduyu.response.LoginRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;

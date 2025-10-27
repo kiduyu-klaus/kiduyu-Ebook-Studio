@@ -55,7 +55,7 @@ public class MyApplication extends Application {
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
 
-        OneSignal.initWithContext(this, "ddb0b1a7-b1e1-4f82-86c3-5b30fffb5e50");
+        OneSignal.initWithContext(this, "060f1d29-e3cb-4292-9184-f86e41ea9a57");
         OneSignal.getNotifications().addClickListener(new NotificationExtenderExample());
 
     }

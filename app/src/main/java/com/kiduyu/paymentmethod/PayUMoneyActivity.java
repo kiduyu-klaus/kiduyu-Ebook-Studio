@@ -14,8 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.kiduyu.ebookstudio.BuildConfig;
 import com.kiduyu.ebookstudio.EditProfileActivity;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.ActivityPaymentBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.ActivityPaymentBinding;
 import com.kiduyu.response.PayUMoneyHashRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;

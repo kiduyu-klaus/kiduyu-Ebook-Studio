@@ -28,8 +28,8 @@ import com.applovin.mediation.nativeAds.MaxNativeAdLoader;
 import com.applovin.mediation.nativeAds.MaxNativeAdView;
 import com.bumptech.glide.Glide;
 import com.kiduyu.ebookstudio.BuildConfig;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowCatBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowCatBinding;
 import com.kiduyu.item.CategoryList;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.Constant;
@@ -93,6 +93,7 @@ public class CategoryAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             if (!categoryLists.get(position).getPost_image().equals("")) {
                 Glide.with(activity.getApplicationContext()).load(categoryLists.get(position).getPost_image())
                         .placeholder(R.drawable.placeholder_landscape)
+                        .centerCrop()
                         .into(viewHolder.rowCatBinding.ivCat);
             }
 

@@ -25,8 +25,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.bumptech.glide.Glide;
-import com.example.ebookstudio.R;
-import com.example.ebookstudio.databinding.ActivityBookDetailBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.ActivityBookDetailBinding;
 import com.kiduyu.adapter.RelatedAdapter;
 import com.kiduyu.fragment.ReportBookFragment;
 import com.kiduyu.fragment.WriteRateReviewFragment;
@@ -303,7 +303,8 @@ public class BookDetailsActivity extends AppCompatActivity {
 
                             viewBookDetail.llDownload.setOnClickListener(v -> {
                                 if (bookDetailListPos.getDownload_enable().equals("1")) {
-                                    downloadPermission();
+                                    //downloadPermission();
+                                    Toast.makeText(BookDetailsActivity.this, getString(R.string.download_disable_msg), Toast.LENGTH_SHORT).show();
                                 } else {
                                     Toast.makeText(BookDetailsActivity.this, getString(R.string.download_disable_msg), Toast.LENGTH_SHORT).show();
                                 }

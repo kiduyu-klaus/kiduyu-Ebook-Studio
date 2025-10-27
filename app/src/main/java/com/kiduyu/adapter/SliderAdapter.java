@@ -10,8 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowSliderHomeBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowSliderHomeBinding;
 import com.kiduyu.item.FeaturedBook;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.EnchantedViewPager;

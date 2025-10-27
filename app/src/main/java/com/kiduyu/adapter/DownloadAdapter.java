@@ -18,8 +18,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowDownloadBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowDownloadBinding;
 import com.kiduyu.item.DownloadList;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.DatabaseHandler;

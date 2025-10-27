@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.PlanAdapter;
-import com.example.androidebookapps.databinding.ActivityPlanBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityPlanBinding;
 import com.kiduyu.paymentmethod.Transaction;
 import com.kiduyu.response.PlanRP;
 import com.kiduyu.rest.ApiClient;

@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
-import com.example.androidebookapps.databinding.ActivitySearchBookBinding;
+import com.kiduyu.ebookstudio.databinding.ActivitySearchBookBinding;
 import com.kiduyu.fragment.BookGridFragment;
 import com.kiduyu.fragment.BookListFragment;
 import com.kiduyu.util.BannerAds;

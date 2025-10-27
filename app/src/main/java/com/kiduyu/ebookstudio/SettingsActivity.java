@@ -17,7 +17,7 @@ import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.SettingAdapter;
-import com.example.androidebookapps.databinding.ActivitySettingsBinding;
+import com.kiduyu.ebookstudio.databinding.ActivitySettingsBinding;
 import com.kiduyu.fragment.ThemeChangeFragment;
 import com.kiduyu.response.AppDetailRP;
 import com.kiduyu.rest.ApiClient;

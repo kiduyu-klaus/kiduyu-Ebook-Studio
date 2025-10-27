@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.kiduyu.ebookstudio.LoginActivity;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.FragmentIntroBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.FragmentIntroBinding;
 
 
 public class IntroFragment extends Fragment {

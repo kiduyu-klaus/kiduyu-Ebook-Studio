@@ -9,8 +9,8 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowTrendHomeBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowTrendHomeBinding;
 import com.kiduyu.item.HomeContent;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.Constant;

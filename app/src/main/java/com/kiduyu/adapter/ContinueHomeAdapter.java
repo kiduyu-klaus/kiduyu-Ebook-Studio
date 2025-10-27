@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowContinueHomeBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowContinueHomeBinding;
 import com.kiduyu.item.HomeContent;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.OnClick;

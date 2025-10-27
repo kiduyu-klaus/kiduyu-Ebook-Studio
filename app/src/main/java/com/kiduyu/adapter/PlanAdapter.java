@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowPlanBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowPlanBinding;
 import com.kiduyu.response.PlanRP;
 import com.kiduyu.util.OnClick;
 

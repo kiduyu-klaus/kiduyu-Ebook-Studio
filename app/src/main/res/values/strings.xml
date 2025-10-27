@@ -236,7 +236,7 @@
     <string name="get_host">ebook_app</string>
     <string name="get_pathPrefix">/</string>
 
-    <string name="admob_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_id">ca-app-pub-3803477439180910~9075957477</string>
     <string name="applovin_sdk_key">xxxxx</string>
 
     <string name="back_key">Please click BACK again to exit</string>

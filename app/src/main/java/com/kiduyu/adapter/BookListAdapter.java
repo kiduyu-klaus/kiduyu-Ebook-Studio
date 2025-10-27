@@ -29,8 +29,8 @@ import com.applovin.mediation.nativeAds.MaxNativeAdLoader;
 import com.applovin.mediation.nativeAds.MaxNativeAdView;
 import com.bumptech.glide.Glide;
 import com.kiduyu.ebookstudio.BuildConfig;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowBookListBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowBookListBinding;
 import com.kiduyu.item.SubCatListBook;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.Constant;
@@ -118,6 +118,7 @@ public class BookListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
             if (!subCatListBook.getPost_image().equals("")) {
                 Glide.with(activity.getApplicationContext()).load(subCatListBook.getPost_image())
                         .placeholder(R.drawable.placeholder_portable)
+                        .centerCrop()
                         .into(viewHolder.rowBookListBinding.ivBook);
             }
 

@@ -18,7 +18,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.androidebookapps.databinding.ActivityMainBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityMainBinding;
 import com.kiduyu.fragment.AuthorFragment;
 import com.kiduyu.fragment.CategoryFragment;
 import com.kiduyu.fragment.HomeFragment;

@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import com.applovin.sdk.AppLovinMediationProvider;
 import com.applovin.sdk.AppLovinSdk;
 import com.applovin.sdk.AppLovinSdkInitializationConfiguration;
-import com.example.androidebookapps.databinding.ActivitySplashBinding;
+import com.kiduyu.ebookstudio.databinding.ActivitySplashBinding;
 import com.kiduyu.response.AppDetailRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;

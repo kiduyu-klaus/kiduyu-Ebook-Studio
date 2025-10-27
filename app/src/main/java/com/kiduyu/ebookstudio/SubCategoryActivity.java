@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.SubCategoryAdapter;
-import com.example.androidebookapps.databinding.ActivitySubCatBinding;
+import com.kiduyu.ebookstudio.databinding.ActivitySubCatBinding;
 import com.kiduyu.item.SubCategoryList;
 import com.kiduyu.response.SubCatRP;
 import com.kiduyu.rest.ApiClient;

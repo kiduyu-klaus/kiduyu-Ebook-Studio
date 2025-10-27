@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">kiduyu Ebook Studio</string>
+
+    <string name="lbl_ebook_app">kiduyu Ebook Studio</string>
+    <string name="lbl_welcome_back">Willkommen zurück!</string>
+    <string name="lbl_let_s_log_in_a">Melden Sie sich an, um fortzufahren</string>
+    <string name="lbl_email">E-Mail*</string>
+    <string name="lbl_name">Name*</string>
+    <string name="lbl_pass">Passwort</string>
+    <string name="lbl_phone">Telefon</string>
+    <string name="lbl_remember_me">Erinnere dich an mich</string>
+    <string name="msg_forgot_password">Passwort vergessen?</string>
+    <string name="lbl_log_in">EINLOGGEN</string>
+    <string name="lbl_skip">Überspringen</string>
+    <string name="msg_by_signing_in_y">Mit der Anmeldung akzeptieren Sie</string>
+    <string name="msg_by_signing_up_policy">Datenschutzrichtlinie</string>
+    <string name="msg_or_continue_with">Oder fahren Sie fort mit</string>
+    <string name="lbl_google">Melden Sie sich mit Google an</string>
+    <string name="msg_don_t_have_an_a">Sie haben noch kein Konto?</string>
+    <string name="lbl_sign_up">Melden Sie sich an</string>
+    <string name="lbl_let_sing_up">„Lasst uns anmelden.“</string>
+    <string name="lbl_register">REGISTRIEREN</string>
+    <string name="msg_by_signing_up_y">Mit der Anmeldung akzeptieren Sie</string>
+    <string name="msg_already_have_acc">Sie haben bereits ein Konto?</string>
+    <string name="reg_log_in">Login</string>
+    <string name="lbl_send_email">E-MAIL SENDEN</string>
+    <string name="lbl_forgot_password">Passwort vergessen</string>
+    <string name="msg_enter_your_email">Geben Sie unten Ihre gültige E-Mail-Adresse ein und wir senden Ihnen eine E-Mail mit Anweisungen zum Ändern Ihres Passworts</string>
+    <string name="please_accept">Datenschutzbestimmungen akzeptieren</string>
+    <string name="please_enter_email">Bitte geben Sie Ihre E-Mail-Adresse ein</string>
+    <string name="please_enter_password">Bitte geben Sie das Passwort ein</string>
+    <string name="please_enter_name">Bitte geben Sie den Namen ein</string>
+    <string name="please_enter_phone">Bitte geben Sie die Telefonnummer ein</string>
+
+    <string name="lbl_next">Nächste</string>
+    <string name="intro_title_1">Nur Bücher können Ihnen helfen</string>
+    <string name="intro_desc_1">Bücher können Ihnen helfen, Ihr Wissen zu erweitern und erfolgreicher zu werden.</string>
+    <string name="intro_title_2">Informieren Sie sich über Ihren Zeitplan</string>
+    <string name="intro_desc_2">Lernen Sie mit unseren interessanten Lektionen in unseren Kursen viele neue Fähigkeiten und lösen Sie Aufgaben</string>
+    <string name="intro_title_3">Willkommen bei der Ebook-App</string>
+    <string name="intro_desc_3">Wir haben wahre Freunde in unserem Leben und die Bücher sind das.Ein Buch hat die Macht, dich selbst zu verändern und dich wertvoller zu machen.</string>
+    <string name="lbl_get_started">Legen Sie los</string>
+
+    <string name="no_data_found">Keine Daten gefunden.</string>
+    <string name="lbl_search_here">Buch hier suchen..</string>
+    <string name="lbl_featured">Hervorgehoben</string>
+    <string name="msg_continue_reading">Lesen Sie weiter</string>
+    <string name="lbl_trending">Trendbücher</string>
+    <string name="lbl_premium">Prämie</string>
+    <string name="ok">OK</string>
+    <string name="failed_try_again">Ein erneuter Versuch ist fehlgeschlagen</string>
+    <string name="internet_connection">Keine Internetverbindung</string>
+    <string name="wrong">Stimmt etwas nicht..</string>
+    <string name="license_msg">Sie verwenden eine ungültige Lizenz oder der Paketname wird bereits verwendet. Für weitere Informationen kontaktieren Sie uns: info@viaviweb.com oder viaviwebtech@gmail.com</string>
+    <string name="share_msg">Laden Sie diese App über diesen Link herunter</string>
+    <string name="lbl_explore">Jetzt entdecken</string>
+
+    <string name="by_author">von%s</string>
+    <string name="currency_code">%s%s</string>
+
+    <string name="cat_title">Kategorien</string>
+    <string name="author_title">Author</string>
+    <string name="latest_title">Letzte</string>
+    <string name="lbl_show_in">Einblenden</string>
+    <string name="book_detail_title">Detailseite</string>
+    <string name="lbl_favourite">Favourite</string>
+    <string name="lbl_download">Herunterladen</string>
+    <string name="lbl_read_book">Lesen</string>
+    <string name="lbl_report_book">Bericht</string>
+    <string name="lbl_about_this_book">Über dieses Buch</string>
+    <string name="lbl_ratings_review">Bewertungen und Rezensionen</string>
+    <string name="lbl_rate_this_book">Bewerten Sie dieses Buch</string>
+    <string name="lbl_write_a_review">Schreiben Sie eine Bewertung</string>
+    <string name="lbl_related_books">Verwandte Bücher</string>
+    <string name="lbl_author_books">Autorenbücher</string>
+    <string name="lbl_author_info">Autoreninfo</string>
+    <string name="msg_no_author_book">Kein Autorenbuch gefunden.</string>
+    <string name="lbl_review_detail">(%sBewertungen)</string>
+
+    <string name="lbl_buy_book">Buch kaufen</string>
+    <string name="lbl_buy_plan">Abonnement kaufen</string>
+    <string name="lbl_buy_plan_title">Kaufen Sie ein Abonnement oder mieten Sie dieses Buch</string>
+    <string name="rent_days">%sTag(e)</string>
+    <string name="no_rent">Kein Mietbuch..</string>
+
+    <string name="star_all">Alle</string>
+    <string name="star_1">1</string>
+    <string name="star_2">2</string>
+    <string name="star_3">3</string>
+    <string name="star_4">4</string>
+    <string name="star_5">5</string>
+
+    <string name="lbl_book_review">Buchrezension</string>
+    <string name="msg_how_likely_are">Wie wahrscheinlich ist es, dass Sie es einem Freund empfehlen? (1-niedrig, 5-hoch)</string>
+    <string name="lbl_write_your_review">Schreiben Sie Ihre Bewertung</string>
+    <string name="lbl_your_review_here">Ihre Bewertung hier..</string>
+    <string name="lbl_submit">Einreichen</string>
+    <string name="loading">Laden..</string>
+    <string name="enter_review">Bitte schreiben Sie Ihre Bewertung</string>
+
+    <string name="lbl_detail_report_book">Berichtsbuch</string>
+    <string name="lbl_detail_report_hint">Schreiben Sie hier den Grund..</string>
+    <string name="lbl_detail_report_msg">Schreiben Sie hier den Grund..</string>
+
+    <string name="lbl_report_comment">Kommentar melden</string>
+    <string name="report_delete">Löschen</string>
+    <string name="report_report">Bericht</string>
+    <string name="lbl_delete_comment">Kommentar löschen</string>
+    <string name="delete_comment_msg">Sind Sie sicher, dass Sie löschen möchten?</string>
+
+    <string name="lbl_setting">Einstellungen</string>
+    <string name="setting_noti">Aktivieren Sie Push-Benachrichtigung</string>
+    <string name="setting_dark">Themenmodus</string>
+    <string name="setting_clear">Cache leeren</string>
+    <string name="setting_more">Mehr App</string>
+    <string name="setting_share">App teilen</string>
+    <string name="setting_rate">App bewerten</string>
+
+    <string name="lbl_app_version">App-Version</string>
+    <string name="lbl_company">Unternehmen</string>
+    <string name="lbl_email_address">E-Mail</string>
+    <string name="lbl_website">Webseite</string>
+    <string name="lbl_contact">Kontakt</string>
+    <string name="lbl_about_us">Über uns</string>
+    <string name="lbl_about_us_title">Über uns</string>
+    <string name="no_link_found">Kein Link gefunden</string>
+
+    <string name="logout_message">Sind Sie sicher, dass Sie sich abmelden möchten?</string>
+    <string name="logout">Abmelden</string>
+    <string name="cancel">STORNIEREN</string>
+    <string name="logout_yes">JA, ABMELDEN</string>
+    <string name="logout_disable">Der Administrator deaktiviert oder löscht Ihr Konto</string>
+
+    <string name="you_have_allReady_download_book">Sie haben dieses Buch bereits heruntergeladen</string>
+    <string name="downloading">Herunterladen</string>
+
+    <string name="profile_title">Profil</string>
+    <string name="profile_edt">Bearbeiten</string>
+
+    <string name="tab_favorite">Mein Favorit</string>
+    <string name="tab_download">Mein Download</string>
+    <string name="tab_continue">Buchen Sie weiter</string>
+    <string name="tab_subs">Abonnement</string>
+    <string name="tab_rent">Mieten</string>
+    <string name="login_require">Anmeldung erforderlich..</string>
+    <string name="lbl_delete">Löschen</string>
+    <string name="delete_msg">Sind Sie sicher, dass Sie löschen möchten?</string>
+    <string name="no_download">Keine Download-Daten gefunden.</string>
+    <string name="no_favorite">Keine Favoritendaten gefunden.</string>
+    <string name="no_continue">Keine Fortsetzungsdaten gefunden.</string>
+
+    <string name="profile_edt_title">Profil bearbeiten</string>
+    <string name="profile_edt_save">ÄNDERUNGEN SPEICHERN</string>
+    <string name="storage_permission">Bitte erteilen Sie eine Speichererlaubnis</string>
+    <string name="edit_gallery">Wählen Sie Galerie</string>
+    <string name="edit_sel_gallery">Galerie</string>
+
+    <string name="lbl_free">Frei</string>
+    <string name="lbl_paid">Bezahlt</string>
+
+    
+    <string name="isRTL">FALSCH</string>
+
+    <string name="search_title">Suchergebnisse</string>
+    <string name="search_msg">Bitte geben Sie Daten ein</string>
+    <string name="subscription_plan">Abonnementplan</string>
+    <string name="subscription_msg">Voller Zugriff auf alle kostenlosen und Premium-Inhalte auch mit Download.Wählen Sie einen Plan basierend auf Ihrer Nutzung.Unten finden Sie den Plannamen, den Preis und die Gültigkeitstage.</string>
+    <string name="select_plan">PLAN AUSWÄHLEN</string>
+    <string name="no_plan">Kein Plan gefunden..</string>
+    <string name="no_payment">Keine Zahlungsmethode gefunden.</string>
+    <string name="plan_line">/</string>
+    <string name="payment_method">Zahlungsmethode</string>
+    <string name="payment_proceed">FAHREN SIE ZUR ZAHLUNG</string>
+    <string name="payment_select">Zahlungsart auswählen</string>
+    <string name="payment_success">Zahlungserfolg</string>
+    <string name="back_to_home">ZURÜCK NACH HAUSE</string>
+    <string name="pay">ZAHLEN</string>
+
+    <string name="my_subs">Mein Abonnement</string>
+    <string name="current_plan">Aktueller Plan:</string>
+    <string name="expired_on">Abgelaufen am:</string>
+    <string name="NA">N / A</string>
+
+    <string name="payment_stripe">Streifen</string>
+    <string name="payment_paypal">PayPal</string>
+    <string name="payment_razor">Razorpay</string>
+    <string name="payment_paystack">Gehaltsstapel</string>
+    <string name="payment_payumoney">PayUMoney</string>
+    <string name="payment_flutterwave">Flatterwelle</string>
+    <string name="payment_need_phone">Für die Bezahlung ist ein Telefon erforderlich</string>
+    <string name="payment_cinetpay">CinetPay</string>
+    <string name="payment_manual">Manuelle Banküberweisung</string>
+    <string name="payment_sslcommerz">SslCommerz</string>
+
+    <string name="paypal_payment_error_1">Es ist ein äußerst unwahrscheinlicher Fehler aufgetreten</string>
+    <string name="paypal_payment_error_2">Der Benutzer hat abgebrochen.</string>
+    <string name="paypal_payment_error_3">Es wurde eine ungültige Zahlung übermittelt</string>
+    <string name="paypal_payment_error_4">Paypal-Fehler</string>
+    <string name="stripe_payment_error_1">Stripe-Fehler</string>
+    <string name="stripe_token_error">Beim Generieren des Stripe-Tokens ist ein Fehler aufgetreten</string>
+    <string name="proceed_with_payment">Fahren Sie nun mit der Zahlung fort</string>
+    <string name="razor_payment_error_1">Razorpay-Fehler</string>
+    <string name="razor_desc">App-Zahlung buchen</string>
+    <string name="pay_stack_error_1">Es ist ein Fehler aufgetreten</string>
+    <string name="flutterwave_payment_error">Flutterwave Pay-Fehler</string>
+    <string name="flutterwave_payment_failed">Die Flutterwave-Zahlung ist fehlgeschlagen</string>
+    <string name="flutterwave_payment_cancel">Flutterwave-Zahlung stornieren</string>
+
+    <string name="filter_title">Filter</string>
+    <string name="filter_sort">Sortieren nach</string>
+    <string name="filter_author">Author</string>
+    <string name="filter_cat">Kategorie</string>
+    <string name="filter_reset">ZURÜCKSETZEN</string>
+    <string name="filter_apply">ANWENDEN</string>
+
+    <string name="filter_sort_new">Neu eingetroffen</string>
+    <string name="filter_sort_pop">Popularität</string>
+    <string name="filter_sort_rating">Bewertungen</string>
+
+    <string name="select_sort">Bitte wählen Sie eine aus</string>
+
+    <string name="change_them">Thema ändern</string>
+    <string name="system_default">Systemstandard</string>
+    <string name="system_light">Lichtmodus</string>
+    <string name="system_dark">Dunkler Modus</string>
+
+    <string name="app_update_title">App-Update</string>
+    <string name="app_update_btn">Aktualisieren</string>
+    <string name="app_cancel_btn">Stornieren</string>
+
+    <string name="scheme">https</string>
+    <string name="host">envato.viaviweb.in</string>
+    <string name="pathPrefix">/ebook_app/</string>
+
+    <string name="get_scheme">Buch</string>
+    <string name="get_host">ebook_app</string>
+    <string name="get_pathPrefix">/</string>
+
+    <string name="admob_id">ca-app-pub-3803477439180910~9075957477</string>
+    <string name="applovin_sdk_key">xxxxx</string>
+
+    <string name="back_key">Bitte klicken Sie erneut auf ZURÜCK, um den Vorgang zu beenden</string>
+    <string name="download_permission">Zum Herunterladen des Buches ist eine Genehmigung erforderlich. Gehen Sie zur Einstellungsseite und zur Push-Benachrichtigung</string>
+
+    <string name="delete_acc">Mein Konto löschen</string>
+    <string name="delete_acc_info">Sind Sie sicher, dass Sie löschen möchten?</string>
+    <string name="delete_acc_btn">JA, LÖSCHEN</string>
+
+    <string name="bottom_home">Heim</string>
+    <string name="bottom_latest">Letzte</string>
+    <string name="bottom_cat">Kategorie</string>
+    <string name="bottom_author">Author</string>
+    <string name="bottom_profile">Profil</string>
+
+    <string name="empty_my_subs">Kein Abonnement erworben</string>
+    <string name="empty_subs_desc">Klicken Sie auf die Schaltfläche unten, um ein Abonnement zu erwerben</string>
+    <string name="empty_subs_start_btn">Jetzt abonnieren</string>
+
+    <string name="cache_size">Größe</string>
+    <string name="cache_mb">MB</string>
+    <string name="cache_clear_msg">Zwischengespeicherte Daten löschen</string>
+    <string name="download_disable_msg">Buch-Download durch Administrator deaktiviert</string>
+
+    <string name="search_author">Autor hier suchen.</string>
+    <string name="search_cat">Kategorie hier durchsuchen..</string>
+
+    <string name="empty_rent_title">Keine Bücher gekauft</string>
+    <string name="empty_rent_desc">Klicken Sie auf die Schaltfläche unten, um ein Buch zu mieten</string>
+    <string name="empty_rent_start_btn">Jetzt durchsuchen</string>
+
+    <string name="empty_continue_title">Keine Bücher werden fortgesetzt</string>
+    <string name="empty_continue_desc">Klicken Sie auf die Schaltfläche unten, um ein Buch zu durchsuchen</string>
+
+    <string name="empty_fav_title">Nein, irgendwelche Lieblingsbücher</string>
+    <string name="empty_fav_desc">Klicken Sie auf die Schaltfläche unten, um ein Buch zu durchsuchen</string>
+
+    <string name="empty_down_title">Keine Bücher heruntergeladen</string>
+    <string name="empty_down_desc">Klicken Sie auf die Schaltfläche unten, um ein Buch zu durchsuchen und herunterzuladen</string>
+
+    <string name="rent_book_msg">Wenn Sie dieses Buch gelesen haben, können Sie es ausleihen, indem Sie auf die Schaltfläche unten klicken und es jetzt kaufen</string>
+    <string name="subs_book_msg">Wenn Sie dieses Buch lesen, können Sie ein Abonnement kaufen. Klicken Sie auf die Schaltfläche unten und kaufen Sie ein Abonnement</string>
+
+    <string name="rent_download_book_msg">Wenn Sie dieses Buch herunterladen möchten, können Sie es ausleihen, indem Sie auf die Schaltfläche unten klicken und es jetzt kaufen</string>
+    <string name="subs_download_book_msg">Wenn Sie dieses Buch herunterladen möchten, können Sie ein Abonnement kaufen. Klicken Sie auf die Schaltfläche unten und kaufen Sie ein Abonnement</string>
+
+    <string name="cinetpay_success">Ihre Zahlung wurde erfolgreich abgeschlossen</string>
+    <string name="cinetpay_failed">Ihre Zahlung ist fehlgeschlagen</string>
+
+
+
+</resources>

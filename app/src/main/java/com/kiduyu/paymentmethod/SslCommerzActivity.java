@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.util.Method;
 import com.sslwireless.sslcommerzlibrary.model.initializer.SSLCAdditionalInitializer;
 import com.sslwireless.sslcommerzlibrary.model.initializer.SSLCommerzInitialization;

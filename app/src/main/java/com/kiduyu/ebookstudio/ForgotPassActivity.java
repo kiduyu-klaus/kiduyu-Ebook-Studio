@@ -6,7 +6,7 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.databinding.ActivityForgotPasswordBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityForgotPasswordBinding;
 import com.kiduyu.response.RegisterRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;

@@ -15,9 +15,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.AuthorAdapter;
 import com.kiduyu.ebookstudio.AuthorDetailsActivity;
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 import com.kiduyu.ebookstudio.SearchBookActivity;
-import com.example.androidebookapps.databinding.FragmentAuthorBinding;
+import com.kiduyu.ebookstudio.databinding.FragmentAuthorBinding;
 import com.kiduyu.item.AuthorList;
 import com.kiduyu.response.AuthorRP;
 import com.kiduyu.rest.ApiClient;

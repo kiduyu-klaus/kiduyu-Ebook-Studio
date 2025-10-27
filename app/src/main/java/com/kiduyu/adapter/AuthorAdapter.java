@@ -27,9 +27,11 @@ import com.applovin.mediation.nativeAds.MaxNativeAdListener;
 import com.applovin.mediation.nativeAds.MaxNativeAdLoader;
 import com.applovin.mediation.nativeAds.MaxNativeAdView;
 import com.bumptech.glide.Glide;
+
+
 import com.kiduyu.ebookstudio.BuildConfig;
-import com.example.androidebookapps.R;
-import com.example.androidebookapps.databinding.RowAuthorBinding;
+import com.kiduyu.ebookstudio.R;
+import com.kiduyu.ebookstudio.databinding.RowAuthorBinding;
 import com.kiduyu.item.AuthorList;
 import com.kiduyu.util.AdInterstitialAds;
 import com.kiduyu.util.Constant;

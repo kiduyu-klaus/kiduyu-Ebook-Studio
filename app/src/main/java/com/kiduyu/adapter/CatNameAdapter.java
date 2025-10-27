@@ -8,7 +8,7 @@ import android.widget.CheckBox;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.androidebookapps.databinding.RowAuthorNameBinding;
+import com.kiduyu.ebookstudio.databinding.RowAuthorNameBinding;
 import com.kiduyu.item.CategoryList;
 
 import org.jetbrains.annotations.NotNull;

@@ -12,7 +12,7 @@ import androidx.cardview.widget.CardView;
 
 import com.bumptech.glide.Glide;
 import com.cinetpay.androidsdk.CinetPayActivity;
-import com.example.androidebookapps.databinding.ActivityPaymentMethodBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityPaymentMethodBinding;
 import com.kiduyu.item.ItemPaymentSetting;
 import com.kiduyu.paymentmethod.FlutterWaveActivity;
 import com.kiduyu.paymentmethod.ManualBankPaymentActivity;

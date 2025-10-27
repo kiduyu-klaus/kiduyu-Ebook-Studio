@@ -9,7 +9,7 @@ import android.view.View;
 import androidx.core.view.MotionEventCompat;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.androidebookapps.R;
+import com.kiduyu.ebookstudio.R;
 
 
 public class EnchantedViewPager extends ViewPager {

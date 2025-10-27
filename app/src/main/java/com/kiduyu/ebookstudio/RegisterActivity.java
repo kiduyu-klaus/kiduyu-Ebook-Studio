@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.databinding.ActivityRegisterBinding;
+import com.kiduyu.ebookstudio.databinding.ActivityRegisterBinding;
 import com.kiduyu.response.RegisterRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;
