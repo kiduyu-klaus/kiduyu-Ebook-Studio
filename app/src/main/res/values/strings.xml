@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Android EBook</string>
+    <string name="app_name">kiduyu Ebook Studio</string>
 
-    <string name="lbl_ebook_app">Ebook App</string>
+    <string name="lbl_ebook_app">kiduyu Ebook Studio</string>
     <string name="lbl_welcome_back">Welcome Back!</string>
     <string name="lbl_let_s_log_in_a">Login in to continue</string>
     <string name="lbl_email">Email*</string>

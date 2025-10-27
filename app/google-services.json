@@ -1,42 +1,41 @@
 {
   "project_info": {
-    "project_number": "170594379420",
-    "firebase_url": "https://android-e-book-8dee6.firebaseio.com",
-    "project_id": "android-e-book-8dee6",
-    "storage_bucket": "android-e-book-8dee6.appspot.com"
+    "project_number": "318691020673",
+    "project_id": "kiduyu-ebook-studio",
+    "storage_bucket": "kiduyu-ebook-studio.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:170594379420:android:057095f1271c644741af59",
+        "mobilesdk_app_id": "1:318691020673:android:4ba6afea215ecea4ab2280",
         "android_client_info": {
-          "package_name": "com.example.androidebookapps"
+          "package_name": "com.kiduyu.ebookstudio"
         }
       },
       "oauth_client": [
         {
-          "client_id": "170594379420-5pqj47ru05r4s4tajeik5hq3eckdej1n.apps.googleusercontent.com",
+          "client_id": "318691020673-31mbo8f72g4m2orjsj29fq0td4eq779g.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.androidebookapps",
-            "certificate_hash": "b91a0a0accab38a32e61b10d25bb89206868535b"
+            "package_name": "com.kiduyu.ebookstudio",
+            "certificate_hash": "607ac4fe633bd6bb48626db805a9b2cc4fd17886"
           }
         },
         {
-          "client_id": "170594379420-g4rqdkr5sru3kucc6hpkf5sqskh7cocr.apps.googleusercontent.com",
+          "client_id": "318691020673-ib6bhp459f2qi76cttqk3lk5f30lglao.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBepKHayjUCKGqhlCzghG-LpL7r5FQs_4k"
+          "current_key": "AIzaSyB1rGJ2OkGBkbnqwnf3t5hZqTsCt8XWBy4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "170594379420-g4rqdkr5sru3kucc6hpkf5sqskh7cocr.apps.googleusercontent.com",
+              "client_id": "318691020673-ib6bhp459f2qi76cttqk3lk5f30lglao.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
