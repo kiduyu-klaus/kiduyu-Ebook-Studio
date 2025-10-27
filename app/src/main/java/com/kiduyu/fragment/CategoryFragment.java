@@ -14,10 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.CategoryAdapter;
-import com.kiduyu.androidebookapps.BookListBySubCatActivity;
+import com.kiduyu.ebookstudio.BookListBySubCatActivity;
 import com.example.androidebookapps.R;
-import com.kiduyu.androidebookapps.SearchBookActivity;
-import com.kiduyu.androidebookapps.SubCategoryActivity;
+import com.kiduyu.ebookstudio.SearchBookActivity;
+import com.kiduyu.ebookstudio.SubCategoryActivity;
 import com.example.androidebookapps.databinding.FragmentCatBinding;
 import com.kiduyu.item.CategoryList;
 import com.kiduyu.response.CatRP;

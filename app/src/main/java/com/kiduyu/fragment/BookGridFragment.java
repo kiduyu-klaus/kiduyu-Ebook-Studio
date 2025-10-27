@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.BookGridAdapter;
 import com.kiduyu.adapter.LatestBookGridAdapter;
-import com.kiduyu.androidebookapps.BookDetailsActivity;
+import com.kiduyu.ebookstudio.BookDetailsActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.FragmentBookBinding;
 import com.kiduyu.item.SubCatListBook;

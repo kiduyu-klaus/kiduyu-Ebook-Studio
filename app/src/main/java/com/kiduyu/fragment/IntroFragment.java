@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.kiduyu.androidebookapps.LoginActivity;
+import com.kiduyu.ebookstudio.LoginActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.FragmentIntroBinding;
 

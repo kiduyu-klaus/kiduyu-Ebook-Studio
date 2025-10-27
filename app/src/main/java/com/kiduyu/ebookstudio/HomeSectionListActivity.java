@@ -1,4 +1,4 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
 import android.content.Intent;
 import android.os.Bundle;

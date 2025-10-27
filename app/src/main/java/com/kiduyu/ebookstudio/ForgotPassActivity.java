@@ -1,4 +1,4 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;

@@ -24,7 +24,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic,android:theme">
         <activity
-            android:name="com.example.androidebookapps.com.kiduyu.androidebookapps.SplashActivity"
+            android:name="com.kiduyu.ebookstudio.SplashActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:theme="@style/RemoveAppSplashTheme">
@@ -50,34 +50,34 @@
 
             </intent-filter>
         </activity>
-        <activity android:name="com.kiduyu.androidebookapps.IntroActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.LoginActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.IntroActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.LoginActivity" />
         <activity
-            android:name="com.kiduyu.androidebookapps.MainActivity"
+            android:name="com.kiduyu.ebookstudio.MainActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.kiduyu.androidebookapps.RegisterActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.ForgotPassActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.SubCategoryActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.BookListBySubCatActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.BookDetailsActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.RateReviewActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.SettingsActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.AboutUsActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.PagesActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.RegisterActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.ForgotPassActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.SubCategoryActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.BookListBySubCatActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.BookDetailsActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.RateReviewActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.SettingsActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.AboutUsActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.PagesActivity" />
         <activity
-            android:name="com.kiduyu.androidebookapps.PDFShow"
+            android:name="com.kiduyu.ebookstudio.PDFShow"
             android:configChanges="orientation|screenLayout|screenSize" />
         <activity
-            android:name="com.kiduyu.androidebookapps.EditProfileActivity"
+            android:name="com.kiduyu.ebookstudio.EditProfileActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name="com.kiduyu.androidebookapps.SearchBookActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.PlanListActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.PaymentMethodActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.HomeSectionListActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.FilterSearchBookActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.AuthorDetailsActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.TrendingBookActivity" />
-        <activity android:name="com.kiduyu.androidebookapps.DownloadActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.SearchBookActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.PlanListActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.PaymentMethodActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.HomeSectionListActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.FilterSearchBookActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.AuthorDetailsActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.TrendingBookActivity" />
+        <activity android:name="com.kiduyu.ebookstudio.DownloadActivity" />
         <activity android:name="com.kiduyu.paymentmethod.PayStackActivity" />
         <activity android:name="com.kiduyu.paymentmethod.StripeActivity" />
         <activity android:name="com.kiduyu.paymentmethod.PayPalActivity" />

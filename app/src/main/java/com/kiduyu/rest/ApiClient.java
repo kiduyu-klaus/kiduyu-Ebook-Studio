@@ -1,6 +1,6 @@
 package com.kiduyu.rest;
 
-import com.kiduyu.androidebookapps.BuildConfig;
+import com.kiduyu.ebookstudio.BuildConfig;
 
 import java.util.concurrent.TimeUnit;
 

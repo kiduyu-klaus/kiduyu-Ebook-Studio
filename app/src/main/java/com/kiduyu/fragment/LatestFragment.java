@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.androidebookapps.R;
-import com.kiduyu.androidebookapps.SearchBookActivity;
+import com.kiduyu.ebookstudio.SearchBookActivity;
 import com.example.androidebookapps.databinding.FragmentLatestBinding;
 import com.kiduyu.util.Method;
 

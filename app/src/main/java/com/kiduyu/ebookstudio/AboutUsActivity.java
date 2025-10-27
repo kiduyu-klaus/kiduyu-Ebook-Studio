@@ -1,4 +1,4 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,7 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.androidebookapps.databinding.ActivityAboutUsBinding;
+import com.example.ebookstudio.R;
+import com.example.ebookstudio.databinding.ActivityAboutUsBinding;
 import com.kiduyu.util.Constant;
 import com.kiduyu.util.Method;
 import com.kiduyu.util.StatusBar;

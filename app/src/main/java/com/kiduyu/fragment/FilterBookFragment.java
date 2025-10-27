@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.AuthorNameAdapter;
 import com.kiduyu.adapter.CatNameAdapter;
-import com.kiduyu.androidebookapps.FilterSearchBookActivity;
+import com.kiduyu.ebookstudio.FilterSearchBookActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.LayoutBottomFilterBinding;
 import com.kiduyu.item.AuthorList;

@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.FavoriteAdapter;
-import com.kiduyu.androidebookapps.BookDetailsActivity;
-import com.kiduyu.androidebookapps.MainActivity;
+import com.kiduyu.ebookstudio.BookDetailsActivity;
+import com.kiduyu.ebookstudio.MainActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.FragmentFavoriteBinding;
 import com.kiduyu.response.SubCatListBookRP;

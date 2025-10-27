@@ -1,4 +1,4 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -14,8 +14,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.bumptech.glide.Glide;
+import com.example.ebookstudio.R;
+import
 import com.kiduyu.adapter.BookGridAdapter;
-import com.example.androidebookapps.databinding.ActivityAuthorDetailBinding;
 import com.kiduyu.item.AuthorDetailList;
 import com.kiduyu.item.BookRelatedList;
 import com.kiduyu.item.SubCatListBook;

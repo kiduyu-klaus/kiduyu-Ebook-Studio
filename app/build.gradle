@@ -21,7 +21,7 @@ android {
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.example.androidebookapps"
+        applicationId "com.example.ebookstudio"
         minSdk 23
         targetSdk 35
         versionCode 1
@@ -55,7 +55,7 @@ android {
         // but continue the build even when errors are found:
         abortOnError false
     }
-    namespace 'com.example.androidebookapps'
+    namespace 'com.example.ebookstudio'
 
 }
 

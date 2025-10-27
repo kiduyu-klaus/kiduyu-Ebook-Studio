@@ -1,4 +1,4 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.androidebookapps.databinding.ActivityDownloadBinding;
+
+import com.example.ebookstudio.R;
+import com.example.ebookstudio.databinding.ActivityDownloadBinding;
 import com.kiduyu.fragment.DownloadFragment;
 import com.kiduyu.fragment.FavoriteFragment;
 import com.kiduyu.util.BannerAds;

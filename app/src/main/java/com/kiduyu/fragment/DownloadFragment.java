@@ -14,8 +14,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.kiduyu.adapter.DownloadAdapter;
-import com.kiduyu.androidebookapps.MainActivity;
-import com.kiduyu.androidebookapps.PDFShow;
+import com.kiduyu.ebookstudio.MainActivity;
+import com.kiduyu.ebookstudio.PDFShow;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.FragmentFavoriteBinding;
 import com.kiduyu.item.DownloadList;

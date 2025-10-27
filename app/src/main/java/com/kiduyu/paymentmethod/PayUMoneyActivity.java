@@ -12,8 +12,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.kiduyu.androidebookapps.BuildConfig;
-import com.kiduyu.androidebookapps.EditProfileActivity;
+import com.kiduyu.ebookstudio.BuildConfig;
+import com.kiduyu.ebookstudio.EditProfileActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.ActivityPaymentBinding;
 import com.kiduyu.response.PayUMoneyHashRP;

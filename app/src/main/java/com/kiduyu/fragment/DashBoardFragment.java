@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.kiduyu.androidebookapps.PlanListActivity;
+import com.kiduyu.ebookstudio.PlanListActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.FragmentDashboardBinding;
 import com.kiduyu.rest.ApiClient;

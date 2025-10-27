@@ -1,4 +1,4 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
 import android.Manifest;
 import android.app.Activity;
@@ -25,8 +25,9 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.bumptech.glide.Glide;
+import com.example.ebookstudio.R;
+import com.example.ebookstudio.databinding.ActivityBookDetailBinding;
 import com.kiduyu.adapter.RelatedAdapter;
-import com.example.androidebookapps.databinding.ActivityBookDetailBinding;
 import com.kiduyu.fragment.ReportBookFragment;
 import com.kiduyu.fragment.WriteRateReviewFragment;
 import com.kiduyu.item.BookDetailList;

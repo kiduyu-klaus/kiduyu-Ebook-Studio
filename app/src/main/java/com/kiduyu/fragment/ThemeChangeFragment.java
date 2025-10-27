@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 
 import com.example.androidebookapps.R;
-import com.kiduyu.androidebookapps.SplashActivity;
+import com.kiduyu.ebookstudio.SplashActivity;
 import com.example.androidebookapps.databinding.LayoutThemeBinding;
 import com.kiduyu.util.Method;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;

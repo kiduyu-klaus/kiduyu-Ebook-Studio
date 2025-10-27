@@ -18,7 +18,7 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.kiduyu.androidebookapps.LoginActivity;
+import com.kiduyu.ebookstudio.LoginActivity;
 import com.example.androidebookapps.R;
 import com.example.androidebookapps.databinding.RowRateReviewBinding;
 import com.kiduyu.item.RateReviewList;

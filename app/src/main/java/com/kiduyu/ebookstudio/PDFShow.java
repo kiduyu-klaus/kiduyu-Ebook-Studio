@@ -1,22 +1,35 @@
-package com.kiduyu.androidebookapps;
+package com.kiduyu.ebookstudio;
 
-import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
+import android.graphics.Color;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;
 import com.kiduyu.util.API;
+import com.kiduyu.util.BannerAds;
 import com.kiduyu.util.Events;
 import com.kiduyu.util.GlobalBus;
 import com.kiduyu.util.Method;
-import com.folioreader.FolioReader;
-import com.folioreader.model.locators.ReadLocator;
+import com.kiduyu.util.StatusBar;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
+import com.github.barteksc.pdfviewer.listener.OnPageErrorListener;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.google.android.material.textview.MaterialTextView;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -38,24 +51,37 @@ import okio.BufferedSink;
 import okio.BufferedSource;
 import okio.Okio;
 
-public class DownloadEpub {
+public class PDFShow extends AppCompatActivity implements OnPageChangeListener, OnLoadCompleteListener, OnPageErrorListener {
 
-    Activity activity;
-    Method method;
-    MaterialTextView textViewCancel;
-    private Dialog dialog;
+    private Method method;
+    private PDFView pdfView;
+    String id, uri, type;
     private OkHttpClient client;
-    private static final String CANCEL_TAG = "c_tag_epub";
-    String pageNum;
+    private Dialog dialog;
+    private MaterialTextView textViewCancel;
+    private static final String CANCEL_TAG = "c_tag_pdf";
+    ImageView imageArrowBack;
+    TextView tvToolbarTitle;
+    String pageNoSend, pageNo = "";
 
-    public DownloadEpub(Activity activity) {
-        this.activity = activity;
-        method = new Method(activity);
-    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
+        StatusBar.initWhite(PDFShow.this);
+        setContentView(R.layout.activity_pdfview);
 
-    public void pathEpub(String path, String bookId, String pageNum) {
+        method = new Method(PDFShow.this);
+        method.forceRTLIfSupported();
 
-        dialog = new Dialog(activity);
+        Intent intent = getIntent();
+        id = intent.getStringExtra("id");
+        uri = intent.getStringExtra("link");
+        String toolbarTitle = intent.getStringExtra("toolbarTitle");
+        type = intent.getStringExtra("type");
+        pageNo = intent.getStringExtra("PAGE_NUM");
+
+        dialog = new Dialog(PDFShow.this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.progressbar_custom);
         dialog.setCancelable(false);
@@ -65,20 +91,78 @@ public class DownloadEpub {
         dialog.getWindow().setLayout(ConstraintLayout.LayoutParams.MATCH_PARENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
         textViewCancel = dialog.findViewById(R.id.textView_cancel_progressBar_custom);
         dialog.show();
-        this.pageNum = pageNum;
+
+        imageArrowBack = findViewById(R.id.imageArrowBack);
+        tvToolbarTitle = findViewById(R.id.tvToolbarTitle);
+
+        tvToolbarTitle.setText(toolbarTitle);
+        imageArrowBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
+
+        LinearLayout linearLayout = findViewById(R.id.linearLayout_pdfView);
+        if (method.isNetworkAvailable()) {
+            BannerAds.showBannerAds(PDFShow.this, linearLayout);
+        }
+
+        pdfView = findViewById(R.id.pdfView_activity);
+        pdfView.setBackgroundColor(Color.LTGRAY);
+
+        if (type.equals("link")) {
+            if (pageNo.isEmpty()) {
+                pdfFile(uri, id, 0);
+            } else {
+                pdfFile(uri, id, Integer.parseInt(pageNo));
+            }
+        } else {
+            File file = new File(uri);
+            if (pageNo.isEmpty()) {
+                displayFromFile(file, 0);
+            } else {
+                displayFromFile(file, Integer.parseInt(pageNo));
+            }
+        }
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                bookContinuePageData(id, method.getUserId(), pageNoSend);
+                Events.UpdatePages updatePages = new Events.UpdatePages();
+                updatePages.setNumPages(pageNoSend);
+                GlobalBus.getBus().post(updatePages);
+                setEnabled(false);
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+    }
+
+    @Override
+    public void onPageChanged(int page, int pageCount) {
+        pageNoSend = String.valueOf(page);
+    }
+
+    @Override
+    public void loadComplete(int nbPages) {
+        dialog.dismiss();
+    }
+
+    @Override
+    public void onPageError(int page, Throwable t) {
+        dialog.dismiss();
+        method.alertBox(getResources().getString(R.string.wrong));
+    }
+
+    public void pdfFile(String path, String bookId, int pageNumber) {
 
         try {
-
-            String filePath = activity.getFilesDir().getAbsolutePath() + File.separator + ".EBookApp";
+            String filePath = getFilesDir().getAbsolutePath() + File.separator + ".EBookApp";
             File rootBook = new File(filePath);
             if (!rootBook.exists()) {
                 rootBook.mkdirs();
             }
-            String fileName = "file" + bookId + ".epub";
-            File fileOpen = new File(filePath, fileName);
+            String fileName = "file" + bookId + ".pdf";
+            File file = new File(filePath, fileName);
 
             textViewCancel.setOnClickListener(v -> {
-                fileOpen.delete();
+                file.delete();
                 dialog.dismiss();
                 if (client != null) {
                     for (Call call1 : client.dispatcher().queuedCalls()) {
@@ -90,11 +174,12 @@ public class DownloadEpub {
                             call1.cancel();
                     }
                 }
+                finish();
             });
 
-            if (fileOpen.exists()) {
-                dialog.dismiss();
-                openBook(fileOpen.toString(), bookId);
+
+            if (file.exists()) {
+                displayFromFile(file, pageNumber);
             } else {
                 client = new OkHttpClient();
                 Request.Builder builder = new Request.Builder()
@@ -144,59 +229,47 @@ public class DownloadEpub {
                                 super.onUIProgressFinish();
                                 Log.e("TAG", "onUIProgressFinish:");
                                 dialog.dismiss();
-                                openBook(fileOpen.toString(), bookId);
-
+                                displayFromFile(file, pageNumber);
                             }
                         });
-
                         try {
-
                             BufferedSource source = responseBody.source();
                             File outFile = new File(filePath + "/" + fileName);
                             BufferedSink sink = Okio.buffer(Okio.sink(outFile));
                             source.readAll(sink);
                             sink.flush();
                             source.close();
-
                         } catch (Exception e) {
                             Log.d("show_data", e.toString());
                         }
                     }
                 });
-
             }
         } catch (Exception e) {
-            dialog.dismiss();
+            if (dialog != null) {
+                dialog.dismiss();
+            }
             Log.d("exception_error", e.toString());
-            method.alertBox(activity.getResources().getString(R.string.failed_try_again));
+            method.alertBox(getResources().getString(R.string.failed_try_again));
         }
 
     }
 
-    private void openBook(String path, String id) {
-
-        final FolioReader folioReader = FolioReader.get();
-        folioReader.setOnHighlightListener((highlight, type) -> {
-
-        });
-
-        if (!pageNum.isEmpty()) {
-            ReadLocator readPosition = ReadLocator.fromJson(pageNum);
-            folioReader.setReadLocator(readPosition);
-        }
-
-        folioReader.openBook(path);
-        folioReader.setReadLocatorListener(readLocator -> {
-            bookContinuePageData(id, method.getUserId(), readLocator.toJson());
-            Events.UpdatePages updatePages = new Events.UpdatePages();
-            updatePages.setNumPages(readLocator.toJson());
-            GlobalBus.getBus().post(updatePages);
-        });
-
+    public void displayFromFile(File file, int pagePosition) {
+        pdfView.fromFile(file)
+                .defaultPage(pagePosition)
+                .onPageChange(this)
+                .enableAnnotationRendering(true)
+                .onLoad(this)
+                .scrollHandle(new DefaultScrollHandle(this))
+                .spacing(10) // in dp
+                .onPageError(this)
+                .load();
     }
+
 
     private void bookContinuePageData(String bookId, String userId, String pageNo) {
-        JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API(activity));
+        JsonObject jsObj = (JsonObject) new Gson().toJsonTree(new API(PDFShow.this));
         jsObj.addProperty("user_id", userId);
         jsObj.addProperty("post_id", bookId);
         jsObj.addProperty("page_num", pageNo);
@@ -214,7 +287,4 @@ public class DownloadEpub {
             }
         });
     }
-
 }
-
-

@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.kiduyu.androidebookapps.AuthorDetailsActivity;
-import com.kiduyu.androidebookapps.BookDetailsActivity;
-import com.kiduyu.androidebookapps.BookListBySubCatActivity;
-import com.kiduyu.androidebookapps.HomeSectionListActivity;
-import com.kiduyu.androidebookapps.SubCategoryActivity;
+import com.kiduyu.ebookstudio.AuthorDetailsActivity;
+import com.kiduyu.ebookstudio.BookDetailsActivity;
+import com.kiduyu.ebookstudio.BookListBySubCatActivity;
+import com.kiduyu.ebookstudio.HomeSectionListActivity;
+import com.kiduyu.ebookstudio.SubCategoryActivity;
 import com.example.androidebookapps.databinding.RowHomeSectionBinding;
 import com.kiduyu.item.HomeSection;
 import com.kiduyu.util.OnClick;

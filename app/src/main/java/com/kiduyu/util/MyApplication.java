@@ -11,7 +11,7 @@ import android.os.StrictMode;
 import androidx.annotation.NonNull;
 import androidx.multidex.MultiDex;
 
-import com.kiduyu.androidebookapps.SplashActivity;
+import com.kiduyu.ebookstudio.SplashActivity;
 import com.facebook.ads.AudienceNetworkAds;
 import com.google.android.gms.ads.MobileAds;
 import com.onesignal.OneSignal;
