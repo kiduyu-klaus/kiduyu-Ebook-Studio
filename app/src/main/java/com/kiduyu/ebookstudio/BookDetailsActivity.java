@@ -30,10 +30,12 @@ import com.kiduyu.ebookstudio.databinding.ActivityBookDetailBinding;
 import com.kiduyu.adapter.RelatedAdapter;
 import com.kiduyu.fragment.ReportBookFragment;
 import com.kiduyu.fragment.WriteRateReviewFragment;
+import com.kiduyu.item.Audiobook;
 import com.kiduyu.item.BookDetailList;
 import com.kiduyu.response.BookDetailRP;
 import com.kiduyu.rest.ApiClient;
 import com.kiduyu.rest.ApiInterface;
+import com.kiduyu.service.AudiobookRepository;
 import com.kiduyu.util.API;
 import com.kiduyu.util.BannerAds;
 import com.kiduyu.util.Constant;
@@ -54,6 +56,8 @@ import com.karumi.dexter.listener.single.PermissionListener;
 import org.greenrobot.eventbus.Subscribe;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -64,6 +68,9 @@ public class BookDetailsActivity extends AppCompatActivity {
     ActivityBookDetailBinding viewBookDetail;
     Method method;
     String postBookId;
+
+
+    AudiobookRepository repository;
     RelatedAdapter relatedAdapter;
     BookDetailList bookDetailListPos;
 
@@ -76,6 +83,7 @@ public class BookDetailsActivity extends AppCompatActivity {
         GlobalBus.getBus().register(this);
         method = new Method(BookDetailsActivity.this);
         method.forceRTLIfSupported();
+        repository= new AudiobookRepository();
 
         Intent intent = getIntent();
         postBookId = intent.getStringExtra("BOOK_ID");
@@ -110,7 +118,28 @@ public class BookDetailsActivity extends AppCompatActivity {
         viewBookDetail.rvRelatedBook.setLayoutManager(new LinearLayoutManager(BookDetailsActivity.this, LinearLayoutManager.HORIZONTAL, false));
         viewBookDetail.rvRelatedBook.setFocusable(false);
         viewBookDetail.rvRelatedBook.setNestedScrollingEnabled(false);
+        viewBookDetail.llCheckBookAudiobook.setOnClickListener(v -> {
+            if (method.isNetworkAvailable()) {
+                StringBuilder strAuthor = new StringBuilder();
+                if (!bookDetailListPos.getListBookDetailAuthor().isEmpty()) {
+                    String prefix = "";
+                    for (int k = 0; k < bookDetailListPos.getListBookDetailAuthor().size(); k++) {
+                        strAuthor.append(prefix);
+                        prefix = ", ";
+                        strAuthor.append(bookDetailListPos.getListBookDetailAuthor().get(k).getAuthor_name());
+                    }
+                }
+                CheckBookAudiobook(bookDetailListPos.getPost_title(), strAuthor.toString());
+            }
 
+
+        });
+
+
+        //linearButtonPart
+        if(viewBookDetail.llDownload.getVisibility()==View.GONE){
+            viewBookDetail.linearButtonPart.setWeightSum(4);
+        }
         if (method.isNetworkAvailable()) {
             bookDetailData();
         } else {
@@ -118,6 +147,166 @@ public class BookDetailsActivity extends AppCompatActivity {
         }
 
         BannerAds.showBannerAds(BookDetailsActivity.this, viewBookDetail.layoutAds);
+    }
+
+    private void CheckBookAudiobook(String postTitle, String string) {
+        String bookTitle = postTitle;
+        String bookAuthor = string;
+        String query = bookTitle + " by " + bookAuthor;    
+        Toast.makeText(BookDetailsActivity.this, "Book Title: "+bookTitle + " Book Author: " + bookAuthor, Toast.LENGTH_SHORT).show();
+        Audiobooksearch(query);
+    }
+
+    private void Audiobooksearch(String query) {
+        viewBookDetail.progressHome.setVisibility(View.VISIBLE);
+        if (query == null || query.trim().isEmpty()) {
+            //error.setValue("Please enter a search term");
+            viewBookDetail.progressHome.setVisibility(View.GONE);
+            Toast.makeText(BookDetailsActivity.this, "Please enter a search term", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        String trimmedQuery = query.trim();
+
+        repository.searchAudiobooks(trimmedQuery, new AudiobookRepository.DataCallback<List<Audiobook>>() {
+            @Override
+            public void onSuccess(List<Audiobook> result) {
+
+                if (result.isEmpty()) {
+                    viewBookDetail.progressHome.setVisibility(View.GONE);
+                    Toast.makeText(BookDetailsActivity.this, "No results found", Toast.LENGTH_LONG).show();
+                    Toast.makeText(BookDetailsActivity.this, "Checking Sample From Audible", Toast.LENGTH_LONG).show();
+                    LoadAudibleSample(trimmedQuery);
+
+                } else {
+                    viewBookDetail.progressHome.setVisibility(View.GONE);
+                    // Get the first audiobook result and load its details
+                    if (result.size() > 0) {
+                        Audiobook firstAudiobook = result.get(0);
+                        String audiobookUrl = firstAudiobook.getUrl();
+
+
+                        if (audiobookUrl != null && !audiobookUrl.isEmpty()) {
+                            if(audiobookUrl.contains("audiobooks4soul.com")){
+                                Toast.makeText(BookDetailsActivity.this, "Loading: " + firstAudiobook.getTitle(), Toast.LENGTH_SHORT).show();
+                                loadSampleBook(audiobookUrl);
+
+                            } else {
+                                Toast.makeText(BookDetailsActivity.this, "Loading: " + firstAudiobook.getTitle(), Toast.LENGTH_SHORT).show();
+                                loadAndPlayAudiobook(audiobookUrl);
+                            }
+                        } else {
+                            Toast.makeText(BookDetailsActivity.this, "Invalid audiobook URL", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+                // After initial search, check for next page
+                //checkForNextPage(trimmedQuery, 1);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                viewBookDetail.progressHome.setVisibility(View.GONE);
+                Toast.makeText(BookDetailsActivity.this, "Search failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void LoadAudibleSample(String trimmedQuery) {
+        viewBookDetail.progressHome.setVisibility(View.VISIBLE);
+        repository.getAudiobookAudibleSample(trimmedQuery, new AudiobookRepository.DataCallback<Audiobook>() {
+
+
+            @Override
+            public void onSuccess(Audiobook data) {
+                if (data != null && data.getAudioUrls().size()>0) {
+                    loadAudibleSampleBook(data.getUrl(),data,trimmedQuery);
+                    viewBookDetail.progressHome.setVisibility(View.GONE);
+                }
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Toast.makeText(BookDetailsActivity.this, "Search failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                Log.d("exception_error", e.toString());
+                viewBookDetail.progressHome.setVisibility(View.GONE);
+
+            }
+        });
+    }
+
+
+    private void loadAudibleSampleBook(String url, Audiobook data,String query) {
+        Log.i("loadSampleBook","audiobookUrl"+ url);
+        Toast.makeText(BookDetailsActivity.this, "Loading: " + url, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(BookDetailsActivity.this, AudiobookPlayerActivity.class);
+        intent.putExtra("AUDIOBOOK_URL", data.getAudioUrls().get(0));
+        intent.putExtra("FROM_SEARCH", false);
+        intent.putExtra("AUDIBLE_AUDIOBOOK", query);
+        startActivity(intent);
+    }
+
+    private void loadSampleBook(String searchQueryurl) {
+        viewBookDetail.progressHome.setVisibility(View.GONE);
+        Log.i("loadSampleBook","audiobookUrl"+ searchQueryurl);
+        Toast.makeText(BookDetailsActivity.this, "Loading: " + searchQueryurl, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(BookDetailsActivity.this, AudiobookPlayerActivity.class);
+        intent.putExtra("AUDIOBOOK_URL", searchQueryurl);
+        intent.putExtra("FROM_SEARCH", true);
+        startActivity(intent);
+        //String searchQueryurl = "https://audiobooks4soul.com/fantastic-beasts-and-where-to-find-them-audiobook-3/";
+        /**repository.Audiobooks4soulDetails(searchQueryurl, new AudiobookRepository.DataCallback<Audiobook>() {
+
+            @Override
+            public void onSuccess(Audiobook result) {
+                String audiobookUrl =result.getUrl();
+                if (result != null && !audiobookUrl.isEmpty()) {
+                    Log.i("loadSampleBook","audiobookUrl"+ result.getAudioUrls().size());
+                    Log.i("loadSampleBook","audiobookUrl"+ result);
+                    Toast.makeText(BookDetailsActivity.this, "Loading: " + result.getTitle(), Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(BookDetailsActivity.this, AudiobookPlayerActivity.class);
+                    intent.putExtra("AUDIOBOOK_URL", audiobookUrl);
+                    intent.putExtra("FROM_SEARCH", true);
+                    startActivity(intent);
+                    viewBookDetail.progressHome.setVisibility(View.GONE);
+                } else {
+                    Toast.makeText(BookDetailsActivity.this, "Invalid audiobook URL", Toast.LENGTH_SHORT).show();
+                    viewBookDetail.progressHome.setVisibility(View.GONE);
+                }
+
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Toast.makeText(BookDetailsActivity.this, "Search failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
+                Log.d("exception_error", e.toString());
+                viewBookDetail.progressHome.setVisibility(View.GONE);
+
+            }
+        });**/
+    }
+
+    private void loadAndPlayAudiobook(String url) {
+        repository.getAudiobookDetails(url, new AudiobookRepository.DataCallback<Audiobook>() {
+            @Override
+            public void onSuccess(Audiobook result) {
+                if (result != null && result.getAudioUrls() != null && !result.getAudioUrls().isEmpty()) {
+                    // Launch the player activity with the audiobook
+                    Intent intent = new Intent(BookDetailsActivity.this, AudiobookPlayerActivity.class);
+                    intent.putExtra("AUDIOBOOK_URL", url);
+                    intent.putExtra("FROM_SEARCH", false);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(BookDetailsActivity.this, "No audio tracks available", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onError(Exception e) {
+                Toast.makeText(BookDetailsActivity.this, "Failed to load audiobook: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void bookDetailData() {

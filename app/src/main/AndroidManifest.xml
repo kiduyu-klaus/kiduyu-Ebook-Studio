@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
     <application
         android:name="com.kiduyu.util.MyApplication"
@@ -24,7 +25,14 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:usesCleartextTraffic,android:theme">
         <activity
-            android:name="com.kiduyu.ebookstudio.SplashActivity"
+            android:name=".AudiobookPlayerActivity"
+            android:exported="false" />
+        <service
+            android:name="com.kiduyu.ebookstudio.AudiobookPlayerService"
+            android:exported="false"
+            android:foregroundServiceType="mediaPlayback" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:theme="@style/RemoveAppSplashTheme">
@@ -47,37 +55,36 @@
                     android:host="@string/get_host"
                     android:pathPrefix="@string/get_pathPrefix"
                     android:scheme="@string/get_scheme" />
-
             </intent-filter>
         </activity>
-        <activity android:name="com.kiduyu.ebookstudio.IntroActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.LoginActivity" />
+        <activity android:name=".IntroActivity" />
+        <activity android:name=".LoginActivity" />
         <activity
-            android:name="com.kiduyu.ebookstudio.MainActivity"
+            android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name="com.kiduyu.ebookstudio.RegisterActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.ForgotPassActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.SubCategoryActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.BookListBySubCatActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.BookDetailsActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.RateReviewActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.SettingsActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.AboutUsActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.PagesActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".ForgotPassActivity" />
+        <activity android:name=".SubCategoryActivity" />
+        <activity android:name=".BookListBySubCatActivity" />
+        <activity android:name=".BookDetailsActivity" />
+        <activity android:name=".RateReviewActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".PagesActivity" />
         <activity
-            android:name="com.kiduyu.ebookstudio.PDFShow"
+            android:name=".PDFShow"
             android:configChanges="orientation|screenLayout|screenSize" />
         <activity
-            android:name="com.kiduyu.ebookstudio.EditProfileActivity"
+            android:name=".EditProfileActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name="com.kiduyu.ebookstudio.SearchBookActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.PlanListActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.PaymentMethodActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.HomeSectionListActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.FilterSearchBookActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.AuthorDetailsActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.TrendingBookActivity" />
-        <activity android:name="com.kiduyu.ebookstudio.DownloadActivity" />
+        <activity android:name=".SearchBookActivity" />
+        <activity android:name=".PlanListActivity" />
+        <activity android:name=".PaymentMethodActivity" />
+        <activity android:name=".HomeSectionListActivity" />
+        <activity android:name=".FilterSearchBookActivity" />
+        <activity android:name=".AuthorDetailsActivity" />
+        <activity android:name=".TrendingBookActivity" />
+        <activity android:name=".DownloadActivity" />
         <activity android:name="com.kiduyu.paymentmethod.PayStackActivity" />
         <activity android:name="com.kiduyu.paymentmethod.StripeActivity" />
         <activity android:name="com.kiduyu.paymentmethod.PayPalActivity" />
@@ -123,6 +130,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
+
             <meta-data
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
@@ -148,6 +156,7 @@
             android:theme="@style/CheckoutTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <data
                     android:host="rzp.io"
                     android:scheme="io.rzp" />
@@ -157,6 +166,6 @@
         <meta-data
             android:name="com.onesignal.NotificationOpened.DEFAULT"
             android:value="DISABLE" />
-
     </application>
+
 </manifest>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Bookmark Name -->
+    <TextView
+        android:id="@+id/tvBookmarkName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Chapter 5 - Important Part"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDelete" />
+
+    <!-- Track and Position Info -->
+    <TextView
+        android:id="@+id/tvBookmarkInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white_alpha_70"
+        android:textSize="12sp"
+        tools:text="Track 5 • 12:34"
+        app:layout_constraintTop_toBottomOf="@id/tvBookmarkName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDelete" />
+
+    <!-- Delete Button -->
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_delete"
+        android:contentDescription="Delete Bookmark"
+        app:tint="@color/white_alpha_70"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

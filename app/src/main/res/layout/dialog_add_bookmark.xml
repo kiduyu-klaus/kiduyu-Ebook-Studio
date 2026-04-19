@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog_rounded"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add Bookmark"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Current Track Info -->
+    <TextView
+        android:id="@+id/tvCurrentTrack"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="@color/white_alpha_70"
+        android:textSize="14sp"
+        tools:text="Track 1 - Chapter 1"
+        app:layout_constraintTop_toBottomOf="@id/tvDialogTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Current Position -->
+    <TextView
+        android:id="@+id/tvCurrentPosition"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textColor="@color/cyan_accent"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="5:32"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentTrack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilBookmarkName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="Bookmark Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/cyan_accent"
+        app:hintTextColor="@color/cyan_accent"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrentPosition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etBookmarkName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white_alpha_70"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionDone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@id/tilBookmarkName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Cancel Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:rippleColor="@color/white_alpha_70" />
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Save"
+            android:textColor="@color/cyan_accent"
+            app:backgroundTint="@color/white_alpha_20"
+            app:strokeColor="@color/cyan_accent"
+            app:strokeWidth="1dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

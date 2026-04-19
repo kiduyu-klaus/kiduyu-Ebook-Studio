@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/playlist_overlay_background"
+    android:paddingTop="48dp">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/playlist_header_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Close"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvPlaylistTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:text="Up Next - 12 tracks"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Playlist RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/playlist_background"
+        android:clipToPadding="false"
+        android:paddingBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar"
+        tools:listitem="@layout/item_playlist_track" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

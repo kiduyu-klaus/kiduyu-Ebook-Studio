@@ -58,7 +58,7 @@
     <color name="intro_title">#FFFFFF</color>
     <color name="intro_desc">#b2ffffff</color>
 
-     <color name="home_search_text">#992F2E41</color>
+    <color name="home_search_text">#992F2E41</color>
     <color name="home_text_sub">#F6F6F6</color>
     <color name="home_author_border">#80F97F68</color>
     <color name="premium_border_bg">#f2f97f68</color>
@@ -166,4 +166,22 @@
     <color name="filter_select_text">#FFFFFF</color>
     <color name="filter_unselect_box">#1F1F1F</color>
     <color name="filter_unselect_text">#FFFFFF</color>
+
+    <!-- Background Colors -->
+    <color name="player_background">#1A1A2E</color>
+
+    <!-- Accent Colors -->
+    <color name="cyan_accent">#00D9FF</color>
+
+    <!-- White Variations -->
+    <color name="white_alpha_70">#B3FFFFFF</color>
+
+    <!-- Additional Colors -->
+    <color name="dark_gray">#2A2A3E</color>
+
+    <!-- Playlist Overlay Colors -->
+    <color name="playlist_overlay_background">#E6000000</color>
+    <color name="playlist_header_background">#1A1A2E</color>
+    <color name="playlist_background">#16213E</color>
+    <color name="playlist_highlight">#1A00D9FF</color>
 </resources>

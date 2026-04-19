@@ -285,7 +285,7 @@
 
     <string name="cinetpay_success">Your payment has been successfully completed</string>
     <string name="cinetpay_failed">Your payment failed</string>
-
+    <string name="lbl_check_audiobook">Audiobook</string>
 
 
 </resources>

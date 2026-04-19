@@ -59,11 +59,33 @@ android {
 
 }
 
+// Add this to force compatible library versions
+configurations.all {
+    resolutionStrategy {
+        force 'androidx.core:core:1.13.1'
+        force 'androidx.core:core-ktx:1.13.1'
+        force 'androidx.activity:activity:1.9.3'
+        force 'androidx.activity:activity-ktx:1.9.3'
+        force 'androidx.activity:activity-compose:1.9.3'
+        force 'androidx.compose.runtime:runtime:1.7.5'
+        force 'androidx.compose.runtime:runtime-livedata:1.7.5'
+        force 'androidx.compose.runtime:runtime-saveable:1.7.5'
+        force 'androidx.compose.ui:ui:1.7.5'
+        force 'androidx.compose.ui:ui-android:1.7.5'
+        force 'androidx.compose.ui:ui-graphics:1.7.5'
+        force 'androidx.compose.ui:ui-graphics-android:1.7.5'
+        force 'androidx.compose.ui:ui-text:1.7.5'
+        force 'androidx.compose.ui:ui-text-android:1.7.5'
+        force 'androidx.lifecycle:lifecycle-runtime-compose:2.8.7'
+    }
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'com.google.android.material:material:1.12.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    implementation 'androidx.activity:activity:1.9.3'  // Changed from 1.12.2 to compatible version
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
     implementation project(path: ':SmoothCheckBox-master')
@@ -106,4 +128,20 @@ dependencies {
     implementation "commons-io:commons-io:2.13.0"
     implementation 'com.cinetpay:androidsdk:1.0.0'
     implementation files('libs/sslCommerzSdk.aar')
+
+    // JSoup for Web Scraping
+    implementation 'org.jsoup:jsoup:1.17.2'
+
+    // Lifecycle for media service
+    implementation "androidx.lifecycle:lifecycle-service:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
+
+    // Media support for audiobook player
+    implementation 'androidx.media:media:1.7.0'
+
+    // ExoPlayer for Cloudflare bypass streaming
+    implementation 'androidx.media3:media3-exoplayer:1.5.0'
+    implementation 'androidx.media3:media3-ui:1.5.0'
+    implementation 'androidx.media3:media3-session:1.5.0'
+    implementation 'androidx.media3:media3-common:1.5.0'
 }
