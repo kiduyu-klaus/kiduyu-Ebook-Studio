@@ -19,10 +19,13 @@ import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -822,14 +825,14 @@ public class WebDataSource {
     public void getAudiobookAudibleSample(String searchQuery, Callback<Audiobook> callback) {
         executor.execute(() -> {
             try {
-                // Split query to extract title and author
                 if (!searchQuery.toLowerCase().contains(" by ")) {
                     Log.e(TAG, "Search query must contain 'by' keyword");
                     mainHandler.post(() -> callback.onError(new IllegalArgumentException("Query must be in format: 'title by author'")));
                     return;
                 }
 
-                String[] parts = searchQuery.split("by");
+                // ✅ Use " by " with limit=2 to avoid splitting on "by" inside words
+                String[] parts = searchQuery.split("(?i) by ", 2);
                 if (parts.length < 2) {
                     Log.e(TAG, "Invalid query format");
                     mainHandler.post(() -> callback.onError(new IllegalArgumentException("Invalid query format")));
@@ -920,9 +923,8 @@ public class WebDataSource {
                                 break;
                             }
                         }
-                        //language
-                        //bc-list-item
-                        //	languageLabel
+
+                        // Extract language
                         String languagetxt = "";
                         for (Element li : authorElements) {
                             String text = li.text().trim();
@@ -938,12 +940,13 @@ public class WebDataSource {
                         String cleanSearchTitle = bookTitle.toLowerCase().replaceAll("[^a-z0-9\\s]", "");
                         String cleanResultAuthor = formatAuthor(resultAuthor);
                         String cleanSearchAuthor = formatAuthor(author);
+
                         Log.i(TAG, "getAudiobookAudibleSample cleanResultAuthor: " + cleanResultAuthor);
                         Log.i(TAG, "getAudiobookAudibleSample cleanSearchAuthor: " + cleanSearchAuthor);
+                        Log.i(TAG, "getAudiobookAudibleSample cleanSearchTitle: " + cleanSearchTitle);
 
-
-
-                        if (cleanResultTitle.contains(cleanSearchTitle) && cleanResultAuthor.contains(cleanSearchAuthor)) {
+                        // ✅ FIXED: use authorsMatch() instead of simple contains()
+                        if (cleanResultTitle.contains(cleanSearchTitle) && authorsMatch(cleanResultAuthor, cleanSearchAuthor)) {
                             if (languagetxt.toLowerCase().trim().equals("english")) {
                                 Log.d(TAG, "Match found: " + resultTitle + " by " + resultAuthor);
 
@@ -951,14 +954,33 @@ public class WebDataSource {
                                 matchedAudiobook.setTitle(resultTitle);
                                 matchedAudiobook.setAuthor(resultAuthor);
 
-                                // Extract image URL - look for img within the product image container
                                 Element imgElement = resultElement.selectFirst("img.bc-image-inset-border");
                                 if (imgElement == null) {
                                     imgElement = resultElement.selectFirst("img");
                                 }
                                 if (imgElement != null) {
-                                    String imageUrl = imgElement.attr("src");
-                                    matchedAudiobook.setImageUrl(removeDimensions(imageUrl));
+                                    String imageUrl = null;
+
+                                    // ✅ Prefer 2x image from srcset for better notification art quality
+                                    String srcset = imgElement.attr("srcset");
+                                    if (!srcset.isEmpty()) {
+                                        for (String entry : srcset.split(",")) {
+                                            entry = entry.trim();
+                                            if (entry.endsWith("2x")) {
+                                                imageUrl = entry.replace("2x", "").trim();
+                                                break;
+                                            }
+                                        }
+                                    }
+
+                                    // ✅ Fallback to src
+                                    if (imageUrl == null || imageUrl.isEmpty()) {
+                                        imageUrl = imgElement.attr("src");
+                                    }
+
+                                    if (!imageUrl.isEmpty()) {
+                                        matchedAudiobook.setImageUrl(removeDimensions(imageUrl));
+                                    }
                                 }
 
                                 // Build description with narrator and runtime
@@ -981,7 +1003,6 @@ public class WebDataSource {
                                 if (overallRatingElement != null) {
                                     String ariaLabel = overallRatingElement.attr("aria-label");
                                     if (!ariaLabel.isEmpty()) {
-                                        // Extract rating number from aria-label like "4.5 out of 5 stars"
                                         java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("([\\d.]+) out of 5 stars");
                                         java.util.regex.Matcher matcher = pattern.matcher(ariaLabel);
                                         if (matcher.find()) {
@@ -996,11 +1017,9 @@ public class WebDataSource {
                                 if (reviewCountElement != null) {
                                     String reviewCount = reviewCountElement.nextSibling().toString().trim();
                                     if (reviewCount.isEmpty()) {
-                                        // Try getting the text from the parent element
                                         Element parentEl = reviewCountElement.parent();
                                         if (parentEl != null) {
                                             String fullText = parentEl.text().trim();
-                                            // Extract just the number
                                             java.util.regex.Pattern pattern = java.util.regex.Pattern.compile("([\\d,]+)");
                                             java.util.regex.Matcher matcher = pattern.matcher(fullText);
                                             if (matcher.find()) {
@@ -1019,7 +1038,6 @@ public class WebDataSource {
 
                                 // Extract series info and language as categories
                                 List<String> categories = new ArrayList<>();
-
                                 if (!seriesInfo.isEmpty()) {
                                     categories.add(seriesInfo);
                                 }
@@ -1032,10 +1050,7 @@ public class WebDataSource {
                                         categories.add("Release: " + releaseDate);
                                     }
                                 }
-
-                                // Set categories
                                 matchedAudiobook.setCategories(categories);
-
 
                                 // Extract sample MP3 URL
                                 Element sampleButton = resultElement.selectFirst("button[data-mp3]");
@@ -1054,7 +1069,7 @@ public class WebDataSource {
                                     }
                                 }
 
-                                // Extract detail page URL - look for the link in the trigger
+                                // Extract detail page URL
                                 Element detailLink = resultElement.selectFirst("a[href*='/pd/']");
                                 if (detailLink == null) {
                                     detailLink = resultElement.selectFirst("div[data-trigger] a");
@@ -1093,4 +1108,69 @@ public class WebDataSource {
         });
     }
 
+    /**
+     * Fuzzy author match that handles middle initials/names gracefully.
+     * Every significant word (length > 1) in the search author must appear
+     * in the result author. Single-letter initials in the search are also skipped.
+     *
+     * Examples:
+     *   "Andrew Dobell"   vs "Andrew M. Dobell"  → true  ✅
+     *   "Lee Child"       vs "Lee Child"          → true  ✅
+     *   "J.R.R. Tolkien"  vs "JRR Tolkien"        → true  ✅ (after punctuation strip)
+     *   "Andrew Smith"    vs "Andrew M. Dobell"   → false ✅
+     */
+
+    /**
+     * For multi-author queries, match if ANY single author from the comma-separated
+     * list individually matches the result author.
+     * e.g. "Barb Hendee, J.C. Hendee" vs "Barb Hendee" → true (first author matches)
+     */
+    private boolean authorsMatch(String resultAuthor, String searchAuthor) {
+        if (resultAuthor == null || searchAuthor == null) return false;
+
+        // Try full string first (handles single-author and exact multi-author matches)
+        if (singleAuthorMatch(resultAuthor, searchAuthor)) return true;
+
+        // Split by comma and try each individual author
+        if (searchAuthor.contains(",")) {
+            for (String singleAuthor : searchAuthor.split(",")) {
+                if (singleAuthorMatch(resultAuthor, singleAuthor.trim())) {
+                    return true; // any one matching author is enough
+                }
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Token-based match for a single author name.
+     * Handles middle initials: "Andrew Dobell" matches "Andrew M. Dobell"
+     */
+    private boolean singleAuthorMatch(String resultAuthor, String searchAuthor) {
+        if (resultAuthor == null || searchAuthor == null || searchAuthor.isEmpty()) return false;
+
+        String normalizedResult = resultAuthor.toLowerCase().replaceAll("[^a-z0-9\\s]", "").trim();
+        String normalizedSearch = searchAuthor.toLowerCase().replaceAll("[^a-z0-9\\s]", "").trim();
+
+        // Fast path: direct substring match
+        if (normalizedResult.contains(normalizedSearch) || normalizedSearch.contains(normalizedResult)) {
+            return true;
+        }
+
+        // Token-based: all significant words in search must appear in result
+        String[] searchTokens = normalizedSearch.split("\\s+");
+        Set<String> resultTokenSet = new HashSet<>(Arrays.asList(normalizedResult.split("\\s+")));
+
+        int matchCount = 0;
+        int significantTokens = 0;
+
+        for (String token : searchTokens) {
+            if (token.length() <= 1) continue; // skip initials
+            significantTokens++;
+            if (resultTokenSet.contains(token)) matchCount++;
+        }
+
+        return significantTokens > 0 && matchCount == significantTokens;
+    }
 }

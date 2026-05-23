@@ -1,0 +1,15 @@
+com.folioreader.test.folioreader-material-1.0.0-0 C:\Users\Administrator\.gradle\caches\transforms-4\1196623a8848eb8ecd22d41dccf3bef5\transformed\material-1.0.0\res
+com.folioreader.test.folioreader-coordinatorlayout-1.0.0-1 C:\Users\Administrator\.gradle\caches\transforms-4\1d2786c15b0da5eb555229f0ec8e8b3f\transformed\coordinatorlayout-1.0.0\res
+com.folioreader.test.folioreader-core-1.1.0-2 C:\Users\Administrator\.gradle\caches\transforms-4\50c8f75eaadc5385f91e0976ce6e0cb4\transformed\core-1.1.0\res
+com.folioreader.test.folioreader-cardview-1.0.0-3 C:\Users\Administrator\.gradle\caches\transforms-4\7d804722041a2364c0006f1d4a8dea21\transformed\cardview-1.0.0\res
+com.folioreader.test.folioreader-constraintlayout-1.1.3-4 C:\Users\Administrator\.gradle\caches\transforms-4\a5b43a9158a6128f860d387a38be2044\transformed\constraintlayout-1.1.3\res
+com.folioreader.test.folioreader-recyclerview-1.1.0-5 C:\Users\Administrator\.gradle\caches\transforms-4\aa62d8a47b948a7c42c61c05ce928ab6\transformed\recyclerview-1.1.0\res
+com.folioreader.test.folioreader-jetified-library-1.2.0-6 C:\Users\Administrator\.gradle\caches\transforms-4\d1d082ff3438152814dac4f641327d69\transformed\jetified-library-1.2.0\res
+com.folioreader.test.folioreader-jetified-appcompat-resources-1.1.0-7 C:\Users\Administrator\.gradle\caches\transforms-4\df53fef829b6a857b1cf737258d8d9a0\transformed\jetified-appcompat-resources-1.1.0\res
+com.folioreader.test.folioreader-transition-1.0.0-8 C:\Users\Administrator\.gradle\caches\transforms-4\e02f3f0c10f46f87b56611153f30754d\transformed\transition-1.0.0\res
+com.folioreader.test.folioreader-appcompat-1.1.0-9 C:\Users\Administrator\.gradle\caches\transforms-4\f11186a4535d46a77331265975cbae27\transformed\appcompat-1.1.0\res
+com.folioreader.test.folioreader-androidTest-10 C:\cracks\My_App\AndroidEBookV21\folioreader\build\generated\res\resValues\androidTest\debug
+com.folioreader.test.folioreader-mergeDebugAndroidTestResources-11 C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.folioreader.test.folioreader-mergeDebugAndroidTestResources-12 C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.folioreader.test.folioreader-debugAndroidTest-13 C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
+com.folioreader.test.folioreader-debug-14 C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\packaged_res\debug\packageDebugResources

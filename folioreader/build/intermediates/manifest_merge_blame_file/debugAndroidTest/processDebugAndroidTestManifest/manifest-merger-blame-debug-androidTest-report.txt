@@ -1,0 +1,117 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.folioreader.test" >
+4
+5    <uses-sdk
+5-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:5:5-74
+6        android:minSdkVersion="21"
+6-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:5:15-41
+7        android:targetSdkVersion="33" />
+7-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:5:42-71
+8
+9    <instrumentation
+9-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:11:5-15:70
+10        android:name="android.test.InstrumentationTestRunner"
+10-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:11:22-75
+11        android:functionalTest="false"
+11-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:14:22-52
+12        android:handleProfiling="false"
+12-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:13:22-53
+13        android:label="Tests for com.folioreader.test"
+13-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:15:22-68
+14        android:targetPackage="com.folioreader.test" />
+14-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:12:22-66
+15
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:5-81
+16-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:10:22-78
+17    <uses-permission android:name="android.permission.INTERNET" />
+17-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:5-67
+17-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:22-64
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+19
+20    <application
+20-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:7:5-9:19
+21        android:allowBackup="true"
+21-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:9-35
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-4\50c8f75eaadc5385f91e0976ce6e0cb4\transformed\core-1.1.0\AndroidManifest.xml:24:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="true"
+25        android:networkSecurityConfig="@xml/network_security_config"
+25-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:9-69
+26        android:requestLegacyExternalStorage="true"
+26-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:9-52
+27        android:supportsRtl="true" >
+27-->[com.github.codetoart:r2-shared-kotlin:1.0.4-2] C:\Users\Administrator\.gradle\caches\transforms-4\35c5922fd12dbd3f2a6edc9ef0930514\transformed\jetified-r2-shared-kotlin-1.0.4-2\AndroidManifest.xml:20:9-35
+28        <uses-library android:name="android.test.runner" />
+28-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:8:9-60
+28-->C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\tmp\manifest\androidTest\debug\tempFile1ProcessTestManifest7788322030568250716.xml:8:23-57
+29
+30        <provider
+30-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:9-21:40
+31            android:name="com.folioreader.AppContext"
+31-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:13-54
+32            android:authorities="com.folioreader.test.provider.appcontext"
+32-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:13-71
+33            android:exported="false" />
+33-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:13-37
+34
+35        <activity
+35-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:23:9-26:60
+36            android:name="com.folioreader.ui.activity.FolioActivity"
+36-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:24:13-69
+37            android:label="@string/app_name"
+37-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:25:13-45
+38            android:theme="@style/FolioActivityDayTheme" />
+38-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:26:13-57
+39        <activity
+39-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:27:9-29:59
+40            android:name="com.folioreader.ui.activity.ContentHighlightActivity"
+40-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:28:13-80
+41            android:theme="@style/AppTheme.NoActionBar" />
+41-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:29:13-56
+42        <activity
+42-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:30:9-41:20
+43            android:name="com.folioreader.ui.activity.SearchActivity"
+43-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:31:13-70
+44            android:exported="true"
+44-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:32:13-36
+45            android:launchMode="singleTop" >
+45-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:33:13-43
+46            <intent-filter>
+46-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:34:13-36:29
+47                <action android:name="android.intent.action.SEARCH" />
+47-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:35:17-71
+47-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:35:25-68
+48            </intent-filter>
+49
+50            <meta-data
+50-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:38:13-40:54
+51                android:name="android.app.searchable"
+51-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:39:17-54
+52                android:resource="@xml/searchable" />
+52-->[:folioreader] C:\cracks\My_App\AndroidEBookV21\folioreader\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:40:17-51
+53        </activity>
+54
+55        <provider
+55-->[com.github.codetoart:r2-streamer-kotlin:1.0.4-2] C:\Users\Administrator\.gradle\caches\transforms-4\17c0e6bfc9532089e36dc8031864778d\transformed\jetified-r2-streamer-kotlin-1.0.4-2\AndroidManifest.xml:22:9-25:40
+56            android:name="org.readium.r2.streamer.ClientAppContext"
+56-->[com.github.codetoart:r2-streamer-kotlin:1.0.4-2] C:\Users\Administrator\.gradle\caches\transforms-4\17c0e6bfc9532089e36dc8031864778d\transformed\jetified-r2-streamer-kotlin-1.0.4-2\AndroidManifest.xml:23:13-68
+57            android:authorities="com.folioreader.test.provider.clientappcontext"
+57-->[com.github.codetoart:r2-streamer-kotlin:1.0.4-2] C:\Users\Administrator\.gradle\caches\transforms-4\17c0e6bfc9532089e36dc8031864778d\transformed\jetified-r2-streamer-kotlin-1.0.4-2\AndroidManifest.xml:24:13-77
+58            android:exported="false" />
+58-->[com.github.codetoart:r2-streamer-kotlin:1.0.4-2] C:\Users\Administrator\.gradle\caches\transforms-4\17c0e6bfc9532089e36dc8031864778d\transformed\jetified-r2-streamer-kotlin-1.0.4-2\AndroidManifest.xml:25:13-37
+59        <provider
+59-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-4\99a4f989a6663bf8a0bcec161bd16d24\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:23:9-27:43
+60            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+60-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-4\99a4f989a6663bf8a0bcec161bd16d24\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:24:13-79
+61            android:authorities="com.folioreader.test.lifecycle-process"
+61-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-4\99a4f989a6663bf8a0bcec161bd16d24\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:25:13-69
+62            android:exported="false"
+62-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-4\99a4f989a6663bf8a0bcec161bd16d24\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:26:13-37
+63            android:multiprocess="true" />
+63-->[androidx.lifecycle:lifecycle-process:2.1.0] C:\Users\Administrator\.gradle\caches\transforms-4\99a4f989a6663bf8a0bcec161bd16d24\transformed\jetified-lifecycle-process-2.1.0\AndroidManifest.xml:27:13-40
+64    </application>
+65
+66</manifest>

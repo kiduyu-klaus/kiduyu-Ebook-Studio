@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.folioreader.test.folioreader-mergeDebugAndroidTestResources-11:/values-w820dp-v13/values-w820dp-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\cracks\\My_App\\AndroidEBookV21\\folioreader\\build\\intermediates\\packaged_res\\debug\\packageDebugResources\\values-w820dp-v13\\values-w820dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "57",
+                        "endOffsets": "108"
+                    }
+                }
+            ]
+        }
+    ]
+}

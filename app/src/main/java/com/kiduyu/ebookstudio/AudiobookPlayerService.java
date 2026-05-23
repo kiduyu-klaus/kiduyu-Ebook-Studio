@@ -35,6 +35,7 @@ import androidx.media3.exoplayer.source.MediaSource;
 import androidx.media3.session.MediaSession;
 import androidx.media3.ui.PlayerNotificationManager;
 
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.transition.Transition;
@@ -58,6 +59,12 @@ public class AudiobookPlayerService extends LifecycleService {
     public static final int STATE_PLAYING = 2;
     public static final int STATE_PAUSED = 3;
     public static final int STATE_STOPPED = 4;
+
+    // Define unique request codes as constants at the top of the class
+    private static final int RC_PLAY_PAUSE = 100;
+    private static final int RC_PREVIOUS   = 101;
+    private static final int RC_NEXT       = 102;
+    private static final int RC_PLAYLIST   = 103;
 
     // Playback modes
     public static final int MODE_NORMAL = 0;
@@ -312,6 +319,7 @@ public class AudiobookPlayerService extends LifecycleService {
                 }
 
                 exoPlayer.prepare();
+                exoPlayer.setPlayWhenReady(true);
 
                 playbackState = STATE_BUFFERING;
                 notifyPlaybackStateChanged();
@@ -371,37 +379,22 @@ public class AudiobookPlayerService extends LifecycleService {
 
         int nextIndex;
         if (playMode == MODE_SHUFFLE) {
-            Random random = new Random();
-            nextIndex = random.nextInt(currentAudiobook.getAudioUrls().size());
+            nextIndex = new Random().nextInt(currentAudiobook.getAudioUrls().size());
         } else {
             nextIndex = currentTrackIndex + 1;
             if (nextIndex >= currentAudiobook.getAudioUrls().size()) {
-                if (playMode == MODE_REPEAT_ALL) {
-                    nextIndex = 0;
-                } else {
-                    return;
-                }
+                if (playMode == MODE_REPEAT_ALL) nextIndex = 0;
+                else return;
             }
         }
 
-        loadTrack(nextIndex);
-        if (playbackState == STATE_PLAYING || exoPlayer.getPlayWhenReady()) {
-            exoPlayer.play();
-        }
+        loadTrack(nextIndex); // ✅ playWhenReady handles auto-play
     }
 
     public void previousTrack() {
         if (currentAudiobook == null || currentAudiobook.getAudioUrls() == null) return;
-
-        int prevIndex = currentTrackIndex - 1;
-        if (prevIndex < 0) {
-            prevIndex = 0;
-        }
-
-        loadTrack(prevIndex);
-        if (playbackState == STATE_PLAYING || exoPlayer.getPlayWhenReady()) {
-            exoPlayer.play();
-        }
+        int prevIndex = Math.max(0, currentTrackIndex - 1);
+        loadTrack(prevIndex); // ✅ same
     }
 
     public void seekTo(int position) {
@@ -486,15 +479,14 @@ public class AudiobookPlayerService extends LifecycleService {
 
     private void onTrackCompletion() {
         if (playMode == MODE_REPEAT_ONE) {
-            loadTrack(currentTrackIndex);
-            exoPlayer.play();
+            loadTrack(currentTrackIndex); // playWhenReady=true handles it
         } else if (currentTrackIndex < currentAudiobook.getAudioUrls().size() - 1) {
             nextTrack();
-            exoPlayer.play();
         } else {
             playbackState = STATE_STOPPED;
             notifyPlaybackStateChanged();
             stopProgressUpdates();
+            stopForeground(false); // ✅ keep notification but stop foreground
         }
     }
 
@@ -534,6 +526,7 @@ public class AudiobookPlayerService extends LifecycleService {
         }
     }
 
+
     @OptIn(markerClass = UnstableApi.class)
     private Notification buildNotification() {
         Intent contentIntent = new Intent(this, AudiobookPlayerActivity.class);
@@ -546,28 +539,28 @@ public class AudiobookPlayerService extends LifecycleService {
         Intent playPauseIntent = new Intent(this, AudiobookPlayerService.class);
         playPauseIntent.setAction(playbackState == STATE_PLAYING ? "ACTION_PAUSE" : "ACTION_PLAY");
         PendingIntent playPausePendingIntent = PendingIntent.getService(
-                this, 0, playPauseIntent,
+                this, RC_PLAY_PAUSE, playPauseIntent,  // ✅ unique code
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
         Intent prevIntent = new Intent(this, AudiobookPlayerService.class);
         prevIntent.setAction("ACTION_PREVIOUS");
         PendingIntent prevPendingIntent = PendingIntent.getService(
-                this, 0, prevIntent,
+                this, RC_PREVIOUS, prevIntent,          // ✅ unique code
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
         Intent nextIntent = new Intent(this, AudiobookPlayerService.class);
         nextIntent.setAction("ACTION_NEXT");
         PendingIntent nextPendingIntent = PendingIntent.getService(
-                this, 0, nextIntent,
+                this, RC_NEXT, nextIntent,              // ✅ unique code
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
         Intent playlistIntent = new Intent(this, AudiobookPlayerService.class);
         playlistIntent.setAction("ACTION_PLAYLIST");
         PendingIntent playlistPendingIntent = PendingIntent.getService(
-                this, PLAYLIST_REQUEST_CODE, playlistIntent,
+                this, RC_PLAYLIST, playlistIntent,      // ✅ unique code
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
 
@@ -586,15 +579,16 @@ public class AudiobookPlayerService extends LifecycleService {
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setPriority(NotificationCompat.PRIORITY_LOW)
                 .setCategory(NotificationCompat.CATEGORY_TRANSPORT)
-                .addAction(android.R.drawable.ic_media_previous, "Previous", prevPendingIntent)
-                .addAction(playPauseIcon, playPauseText, playPausePendingIntent)
-                .addAction(android.R.drawable.ic_media_next, "Next", nextPendingIntent)
-                .addAction(R.drawable.ic_playlist, "Playlist", playlistPendingIntent)
+                .addAction(android.R.drawable.ic_media_previous, "Previous", prevPendingIntent)  // index 0
+                .addAction(playPauseIcon, playPauseText, playPausePendingIntent)                  // index 1
+                .addAction(android.R.drawable.ic_media_next, "Next", nextPendingIntent)          // index 2
+                .addAction(R.drawable.ic_playlist, "Playlist", playlistPendingIntent)            // index 3
                 .setStyle(new androidx.media.app.NotificationCompat.MediaStyle()
                         .setMediaSession(mediaSession.getSessionCompatToken())
-                        .setShowActionsInCompactView(0, 1, 2, 3));
+                        .setShowActionsInCompactView(0, 1, 2)); // ✅ max 3 indices: prev, play/pause, next
 
-        if (currentAudiobook != null && currentAudiobook.getImageUrl() != null && !currentAudiobook.getImageUrl().isEmpty()) {
+        if (currentAudiobook != null && currentAudiobook.getImageUrl() != null
+                && !currentAudiobook.getImageUrl().isEmpty()) {
             loadAndSetAlbumArt(builder, currentAudiobook.getImageUrl());
         }
 
@@ -602,6 +596,11 @@ public class AudiobookPlayerService extends LifecycleService {
     }
 
     private void loadAndSetAlbumArt(NotificationCompat.Builder builder, String imageUrl) {
+        // ✅ Reject null, empty, or data: URIs before Glide ever sees them
+        if (imageUrl == null || imageUrl.isEmpty() || imageUrl.startsWith("data:")) {
+            Log.w(TAG, "Skipping invalid album art URL: " + imageUrl);
+            return;
+        }
         try {
             Glide.with(getApplicationContext())
                     .asBitmap()
@@ -634,6 +633,7 @@ public class AudiobookPlayerService extends LifecycleService {
             Log.d(TAG, "Service restarted with existing playback - showing notification");
             startForeground(NOTIFICATION_ID, buildNotification());
         }
+        startForeground(NOTIFICATION_ID, buildNotification());
 
         if (intent != null && intent.getAction() != null) {
             switch (intent.getAction()) {

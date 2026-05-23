@@ -365,6 +365,7 @@ public class AudiobookPlayerActivity extends AppCompatActivity implements
 
         // Album art
         if (audiobook.getImageUrl() != null && !audiobook.getImageUrl().isEmpty()) {
+            Log.d(TAG,"Album art: "+audiobook.getImageUrl());
             Glide.with(this)
                     .load(audiobook.getImageUrl())
                     .placeholder(R.drawable.placeholder_portable)
