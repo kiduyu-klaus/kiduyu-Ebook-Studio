@@ -115,9 +115,9 @@ dependencies {
         exclude group: "com.github.NanoHttpd.nanohttpd"
         changing = true
     }
-    api 'org.nanohttpd:nanohttpd:2.3.1'
-    api 'org.nanohttpd:nanohttpd-nanolets:2.3.1'
-    api 'org.nanohttpd:nanohttpd-webserver:2.3.1'
+    api 'com.github.edrlab.nanohttpd:nanohttpd:c3b149e04df161c85daeef02899128e727148b02'
+    api 'com.github.edrlab.nanohttpd:nanohttpd-nanolets:c3b149e04df161c85daeef02899128e727148b02'
+    api 'com.github.edrlab.nanohttpd:nanohttpd-webserver:c3b149e04df161c85daeef02899128e727148b02'
     // Only ReflectionUtils in Spring framework is used
     implementation 'org.springframework:spring-core:4.3.19.RELEASE'
 
