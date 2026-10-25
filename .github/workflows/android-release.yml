@@ -31,7 +31,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build release APK
-        run: ./gradlew :app:assembleRelease --build-cache --configuration-cache --parallel -x lint -x test
+        run: ./gradlew :app:assembleRelease --build-cache --parallel -x lint -x test
 
       - name: Read app version
         id: app_version
