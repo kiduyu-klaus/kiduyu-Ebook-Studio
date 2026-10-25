@@ -112,6 +112,7 @@ dependencies {
     }
     api("com.github.codetoart:r2-streamer-kotlin:$versions.r2StreamerKotlin") {
         exclude group: "org.slf4j", module: "slf4j-api"
+        exclude group: "com.github.NanoHttpd.nanohttpd"
         changing = true
     }
     api 'org.nanohttpd:nanohttpd:2.3.1'
